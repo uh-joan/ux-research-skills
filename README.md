@@ -1,6 +1,6 @@
-# UX Research Automation
+# UX Research Skills
 
-AI-powered toolkit for transforming interview transcripts into actionable product insights using Claude Code skills.
+AI-powered Claude Code skills for transforming interview transcripts into actionable product insights.
 
 ## Overview
 
