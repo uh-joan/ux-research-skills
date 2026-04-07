@@ -1,0 +1,79 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.atrashes
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Salesforce
+.sfdx/
+
+# Environment variables and secrets
+.env
+.env.local
+.mcp.json
+
+# Node modules (if any JS dependencies added)
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Project folders - ignore all uppercase directories at root
+# Matches: MT360/, CDDI/, CPI/, etc.
+/[A-Z]*/
+/[A-Z][A-Z]*/
+/[A-Z][A-Z0-9]*/
+
+# Docs folder (except specific public docs)
+/docs/
+!/docs/ai-powered-ux-workflow.md
+!/docs/interview-guide.md
+
+# Specific skills to ignore
+/.claude/skills/mental-model-diagram/
+/.claude/skills/stakeholder-mapper/
+/.claude/skills/task-analysis-generator/
+SECURITY_AUDIT_REPORT.md
