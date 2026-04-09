@@ -2,13 +2,13 @@
 
 **Step-by-Step Process for Automating Qualitative Research**
 
-Use this workflow when starting a new project (e.g., MT360) to systematically transform raw interview transcripts into actionable product insights.
+Use this workflow when starting a new project to systematically transform raw interview transcripts into actionable product insights.
 
 ---
 
 ## Prerequisites
 
-- **Input:** 9-16 interview transcripts (TXT format) in `[PROJECT]/transcripts/`
+- **Input:** 10-20 interview transcripts (TXT or VTT format) in `[PROJECT]/transcripts/`
 - **Skills:** Claude Code skills installed in `.claude/skills/`
 - **Methodology:** Nielsen Norman Group qualitative research + Jobs-to-be-Done
 
