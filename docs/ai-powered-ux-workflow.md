@@ -325,11 +325,11 @@ So I can [outcome]
 
 ```bash
 # 1. Organize transcripts
-mkdir -p MT360/transcripts MT360/empathy-maps MT360/journey MT360/personas MT360/jtbd MT360/scenarios MT360/ai-opportunities
-# Add interview TXT files to MT360/transcripts/
+mkdir -p project-name/transcripts/empathy-maps project-name/journey project-name/personas project-name/jtbd project-name/scenarios project-name/ai-opportunities
+# Add interview TXT files to project-name/transcripts/
 
 # 2. Generate empathy maps (Step 1) - CAN RUN IN PARALLEL WITH STEP 3
-cd MT360
+cd project-name
 # Run empathy-map-generator for each transcript
 # Output: empathy-maps/[participant-name]-empathy-map-YYYY-MM-DD.md
 
