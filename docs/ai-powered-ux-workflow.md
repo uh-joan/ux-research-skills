@@ -321,7 +321,7 @@ So I can [outcome]
 
 ---
 
-## Example: Starting MT360 Project
+## Example: Starting project-name Project
 
 ```bash
 # 1. Organize transcripts
