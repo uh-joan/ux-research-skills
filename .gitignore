@@ -70,6 +70,8 @@ build/
 !platform-research/
 # Whitelist automated clustering outputs in project dirs (raw project files remain excluded)
 !DI&A/empathy-maps/clustering-analysis-automated.md
+# Whitelist synthesized AI opportunity assessment for Fusion (closes pipeline gap)
+!Fusion/ai-opportunities/ai-opportunity-assessment-2026-04-27.md
 
 # Docs folder (except specific public docs)
 /docs/
