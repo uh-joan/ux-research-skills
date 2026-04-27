@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>researcher_ux Platform Research — Progress Report 2026-04-27</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f1117; color: #e1e4e8; line-height: 1.6; }
+  .header { background: linear-gradient(135deg, #1a1d2e 0%, #0d1b2a 100%); padding: 48px 48px 32px; border-bottom: 1px solid #30363d; }
+  .header h1 { font-size: 2rem; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+  .header .subtitle { color: #8b949e; margin-top: 8px; font-size: 1rem; }
+  .header .meta { margin-top: 16px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+  .badge-green { background: #1a3a2a; color: #3fb950; border: 1px solid #238636; }
+  .badge-blue { background: #1a2840; color: #58a6ff; border: 1px solid #1f6feb; }
+  .badge-orange { background: #3a2510; color: #f0883e; border: 1px solid #9e6a03; }
+
+  .content { max-width: 1100px; margin: 0 auto; padding: 40px 48px; }
+
+  .section { margin-bottom: 48px; }
+  .section-title { font-size: 1.3rem; font-weight: 600; color: #f0f6fc; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 1px solid #21262d; display: flex; align-items: center; gap: 10px; }
+
+  /* Experiment cards */
+  .exp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .exp-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; }
+  .exp-card.shipped { border-left: 3px solid #3fb950; }
+  .exp-card.next { border-left: 3px solid #58a6ff; }
+  .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+  .exp-id { font-size: 0.75rem; font-weight: 700; color: #8b949e; letter-spacing: 0.5px; text-transform: uppercase; }
+  .exp-title { font-size: 1rem; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+  .exp-result { font-size: 0.85rem; color: #8b949e; }
+  .exp-result strong { color: #3fb950; }
+
+  /* Key findings */
+  .finding-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 24px; margin-bottom: 16px; }
+  .finding-card .finding-num { font-size: 0.75rem; font-weight: 700; color: #58a6ff; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .finding-card h3 { font-size: 1.05rem; font-weight: 600; color: #f0f6fc; margin-bottom: 10px; }
+  .finding-card p { font-size: 0.9rem; color: #8b949e; }
+  .finding-card .highlight { color: #e1e4e8; }
+
+  /* Cluster table */
+  .cluster-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  .cluster-table th { background: #21262d; color: #8b949e; font-weight: 600; padding: 10px 12px; text-align: left; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  .cluster-table td { padding: 10px 12px; border-bottom: 1px solid #21262d; color: #e1e4e8; }
+  .cluster-table tr:hover td { background: #1c2128; }
+  .universal { color: #3fb950; font-weight: 600; }
+
+  /* Platform capabilities */
+  .cap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .cap-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; }
+  .cap-card.cap-data { border-top: 3px solid #f0883e; }
+  .cap-card.cap-trust { border-top: 3px solid #58a6ff; }
+  .cap-card.cap-nl { border-top: 3px solid #a371f7; }
+  .cap-card h3 { font-size: 0.95rem; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+  .cap-card .cap-meta { font-size: 0.75rem; color: #8b949e; margin-bottom: 12px; }
+  .cap-card ul { font-size: 0.8rem; color: #8b949e; padding-left: 16px; }
+  .cap-card ul li { margin-bottom: 4px; }
+  .cap-score { display: inline-block; background: #1a3a2a; color: #3fb950; border-radius: 4px; padding: 2px 8px; font-size: 0.75rem; font-weight: 600; margin-left: 8px; }
+
+  /* Demoted */
+  .demoted-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .demoted-chip { background: #3a1a1a; border: 1px solid #6e1010; border-radius: 4px; padding: 6px 12px; font-size: 0.8rem; color: #f85149; }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: #21262d; }
+  .tl-item { position: relative; margin-bottom: 20px; }
+  .tl-dot { position: absolute; left: -24px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: #3fb950; }
+  .tl-dot.pending { background: #58a6ff; }
+  .tl-title { font-size: 0.9rem; font-weight: 600; color: #f0f6fc; }
+  .tl-desc { font-size: 0.82rem; color: #8b949e; margin-top: 3px; }
+
+  /* Stats bar */
+  .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+  .stat-box { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; text-align: center; }
+  .stat-num { font-size: 2rem; font-weight: 700; color: #3fb950; }
+  .stat-label { font-size: 0.8rem; color: #8b949e; margin-top: 4px; }
+
+  @media (max-width: 700px) {
+    .cap-grid, .stats-bar { grid-template-columns: 1fr 1fr; }
+    .content { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>researcher_ux Platform Research</h1>
+  <p class="subtitle">AI-powered UX research skill improvements — autonomous research session</p>
+  <div class="meta">
+    <span class="badge badge-green">6 experiments shipped</span>
+    <span class="badge badge-blue">2 skills created</span>
+    <span class="badge badge-orange">2026-04-27</span>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat-box">
+      <div class="stat-num">6</div>
+      <div class="stat-label">Hypotheses Shipped</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">11</div>
+      <div class="stat-label">Universal Pain Clusters</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Platform Capabilities Identified</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">661</div>
+      <div class="stat-label">FEELS Entries Analyzed</div>
+    </div>
+  </div>
+
+  <!-- Experiments -->
+  <div class="section">
+    <div class="section-title">Experiments Completed</div>
+    <div class="exp-grid">
+
+      <div class="exp-card shipped">
+        <div class="exp-header">
+          <span class="exp-id">H1 · Semantic Clustering</span>
+          <span class="badge badge-green">Shipped</span>
+        </div>
+        <div class="exp-title">Cross-Project FEELS Clustering</div>
+        <div class="exp-result">
+          <strong>661 entries, 104 empathy maps → 14 clusters, 12% noise.</strong>
+          UMAP outperforms PCA (49%→12% noise). 11 of 14 clusters universal across 5+ products.
+        </div>
+      </div>
+
+      <div class="exp-card shipped">
+        <div class="exp-header">
+          <span class="exp-id">H4 · Confidence Propagation</span>
+          <span class="badge badge-green">Shipped</span>
+        </div>
+        <div class="exp-title">Pain-Modulated Confidence Weighting</div>
+        <div class="exp-result">
+          <strong>Disconfirmatory but revelatory.</strong>
+          Blind confidence weighting demotes MENA/Brazil (P0, pain 9.0/10) to P4 — false demotion.
+          Correct design: pain ≥ 8.0 → confidence floor 0.9. Now algorithmic.
+        </div>
+      </div>
+
+      <div class="exp-card shipped">
+        <div class="exp-header">
+          <span class="exp-id">H5 · Cross-Project Synthesizer</span>
+          <span class="badge badge-green">Shipped</span>
+        </div>
+        <div class="exp-title">Cross-Project Synthesis Skill</div>
+        <div class="exp-result">
+          <strong>Skill created and callable as /cross-project-synthesizer.</strong>
+          Auto-discovers all projects with empathy maps. Eliminates per-project manual synthesis.
+        </div>
+      </div>
+
+      <div class="exp-card shipped">
+        <div class="exp-header">
+          <span class="exp-id">H7 · Pain Matrix Autogen</span>
+          <span class="badge badge-green">Shipped</span>
+        </div>
+        <div class="exp-title">Pain-Point Matrix Auto-Discovery</div>
+        <div class="exp-result">
+          <strong>SKILL.md refactored with auto-discovery mode.</strong>
+          /pain-point-matrix (no args) → auto-discovers all 9 projects. Adoption barrier removed.
+        </div>
+      </div>
+
+      <div class="exp-card shipped">
+        <div class="exp-header">
+          <span class="exp-id">H9 · Empathy Clustering Skill</span>
+          <span class="badge badge-green">Shipped</span>
+        </div>
+        <div class="exp-title">Productized UMAP+HDBSCAN Pipeline</div>
+        <div class="exp-result">
+          <strong>DI&A: 21 maps → 8 clusters, 4% noise, &lt;10 seconds.</strong>
+          All 4 manual themes recovered + 4 new nuances. Callable as /empathy-clustering [project].
+        </div>
+      </div>
+
+      <div class="exp-card shipped">
+        <div class="exp-header">
+          <span class="exp-id">H8 · Cluster-Aware Scoring</span>
+          <span class="badge badge-green">Shipped</span>
+        </div>
+        <div class="exp-title">Universal Clusters → Platform Roadmap</div>
+        <div class="exp-result">
+          <strong>22/24 AI opportunities re-ranked. 4 demoted to P3.</strong>
+          3 platform capability themes emerge. Per-product P1 tier systematically undervalues universal investments.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Key Findings -->
+  <div class="section">
+    <div class="section-title">Key Findings</div>
+
+    <div class="finding-card">
+      <div class="finding-num">Finding 1 — H1</div>
+      <h3>Pain Signals Are Universal Across Clarivate Products</h3>
+      <p>11 of 14 emotional pain clusters span 5+ of 9 product domains. Users across DI&A, CPI, MT360, KAI, MASS, PT, CDDI, OFFX, Fusion feel <span class="highlight">more alike than different</span>. This was invisible at per-project scope.</p>
+    </div>
+
+    <div class="finding-card">
+      <div class="finding-num">Finding 2 — H4</div>
+      <h3>Pain Intensity Must Gate Confidence Weighting</h3>
+      <p>Blind frequency-based confidence weighting incorrectly demotes high-stakes, rare signals. MENA/Brazil regional coverage (pain 9.0/10, only 3 users) is a P0 churn risk — blind weighting makes it P4. Rule: <span class="highlight">pain ≥ 8.0 → confidence floor = 0.9, regardless of frequency.</span></p>
+    </div>
+
+    <div class="finding-card">
+      <div class="finding-num">Finding 3 — H8</div>
+      <h3>Per-Product AI Roadmaps Undervalue Platform Investments</h3>
+      <p>When H1 cluster universality weights are applied to 24 AI opportunities: 22 re-rank, 4 product-specific items demote. The result reveals <span class="highlight">3 platform capabilities</span> — Data Synthesis, Trust/RAG Infrastructure, NL Workflow Automation — each addressable with shared platform code rather than per-product builds.</p>
+    </div>
+
+    <div class="finding-card">
+      <div class="finding-num">Finding 4 — H1 + H9</div>
+      <h3>UMAP Dramatically Outperforms PCA for Empathy Clustering</h3>
+      <p>Switching from PCA to UMAP reduces clustering noise from <span class="highlight">49% → 12%</span> on the same dataset. The empathy-clustering skill (H9) makes this accessible with a single command: <code>/empathy-clustering [project]</code>. Runtime: &lt;10 seconds per project.</p>
+    </div>
+  </div>
+
+  <!-- Universal Clusters -->
+  <div class="section">
+    <div class="section-title">11 Universal Pain Clusters (H1)</div>
+    <table class="cluster-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Cluster Name</th>
+          <th>Entries</th>
+          <th>Products</th>
+          <th>Universality</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>0</td><td>AI Opportunity-Threat Ambivalence</td><td>162</td><td>7/9</td><td class="universal">Universal</td></tr>
+        <tr><td>1</td><td>Expert Achievement Satisfaction</td><td>72</td><td>8/9</td><td class="universal">Universal</td></tr>
+        <tr><td>2</td><td>Methodological Confidence in Triangulation</td><td>57</td><td>8/9</td><td class="universal">Universal</td></tr>
+        <tr><td>3</td><td>Vendor Commercial Friction</td><td>23</td><td>7/9</td><td class="universal">Universal</td></tr>
+        <tr><td>4</td><td>Strategic Isolation &amp; Disruption Anxiety</td><td>37</td><td>7/9</td><td class="universal">Universal</td></tr>
+        <tr><td>5</td><td>Constant Urgency Pressure</td><td>20</td><td>7/9</td><td class="universal">Universal</td></tr>
+        <tr><td>6</td><td>Tool Navigation Friction</td><td>17</td><td>7/9</td><td class="universal">Universal</td></tr>
+        <tr><td>7</td><td>Process Verification Anxiety</td><td>15</td><td>6/9</td><td class="universal">Universal</td></tr>
+        <tr><td>11</td><td>Vendor Partnership Dependency</td><td>22</td><td>5/9</td><td class="universal">Universal</td></tr>
+        <tr><td>12</td><td>Data Fragmentation Fatigue</td><td>26</td><td>7/9</td><td class="universal">Universal</td></tr>
+        <tr><td>13</td><td>Manual Correction Burden at Scale</td><td>69</td><td>8/9</td><td class="universal">Universal</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Platform Capabilities -->
+  <div class="section">
+    <div class="section-title">3 Platform Capability Themes (H8)</div>
+    <div class="cap-grid">
+      <div class="cap-card cap-data">
+        <h3>Data Synthesis &amp; Reconciliation <span class="cap-score">8/9 products</span></h3>
+        <div class="cap-meta">Clusters 12 (Data Fragmentation) + 13 (Manual Correction Burden)</div>
+        <ul>
+          <li>Cross-source entity resolution</li>
+          <li>Fuzzy matching as shared service</li>
+          <li>Variance detection + auto-correction</li>
+          <li><strong>MVP:</strong> PT Fuzzy-Match Entity Resolver</li>
+        </ul>
+      </div>
+      <div class="cap-card cap-trust">
+        <h3>Trust / Retrieval-First AI <span class="cap-score">7-8/9 products</span></h3>
+        <div class="cap-meta">Clusters 0 (AI Ambivalence) + 2 (Methodological Confidence) + 7 (Verification)</div>
+        <ul>
+          <li>Source citation at response level</li>
+          <li>Methodology provenance trail</li>
+          <li>Hallucination prevention via RAG</li>
+          <li><strong>MVP:</strong> PT Retrieval-First Architecture</li>
+        </ul>
+      </div>
+      <div class="cap-card cap-nl">
+        <h3>NL Workflow Automation <span class="cap-score">7/9 products</span></h3>
+        <div class="cap-meta">Clusters 5 (Urgency) + 6 (Tool Friction) + 13 (Manual Burden)</div>
+        <ul>
+          <li>Natural language → synthesized report</li>
+          <li>60-90 min → 5-10 min universally</li>
+          <li>Per-product data adapters</li>
+          <li><strong>MVP:</strong> MASS NL Query Interface</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Demoted -->
+  <div class="section">
+    <div class="section-title">4 Demoted Opportunities — Product-Specific Only</div>
+    <p style="font-size:0.85rem; color:#8b949e; margin-bottom:12px;">These P1s were inflated by per-product scope. They should NOT receive shared platform resources.</p>
+    <div class="demoted-list">
+      <div class="demoted-chip">CPI: Multi-Parameter Candidate Screening</div>
+      <div class="demoted-chip">CDDI: AI-Powered Literature Summarization</div>
+      <div class="demoted-chip">CDDI: Chemistry-Biology Translation AI</div>
+      <div class="demoted-chip">OFFX: Evidence Change Alerting</div>
+    </div>
+  </div>
+
+  <!-- Next Steps -->
+  <div class="section">
+    <div class="section-title">Research Trajectory</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-title">H1 Semantic Clustering ✅</div>
+        <div class="tl-desc">14 clusters, 12% noise across 104 empathy maps, 9 products</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-title">H5 Cross-Project Synthesizer ✅</div>
+        <div class="tl-desc">Skill created; auto-discovers all projects</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-title">H7 Pain-Matrix Autogen ✅</div>
+        <div class="tl-desc">Auto-discovery mode added to pain-point-matrix skill</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-title">H4 Confidence Propagation ✅</div>
+        <div class="tl-desc">Pain-modulated confidence weighting design validated</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-title">H9 Empathy Clustering Skill ✅</div>
+        <div class="tl-desc">Productized as /empathy-clustering — &lt;10s per project</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-title">H8 Cluster-Aware Scoring ✅</div>
+        <div class="tl-desc">3 platform capability themes — per-product roadmaps restructured</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot pending"></div>
+        <div class="tl-title">H2 Pipeline Automation — Next</div>
+        <div class="tl-desc">CrewAI/LangGraph for empathy → persona → JTBD (eliminates manual triggers)</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot pending"></div>
+        <div class="tl-title">H3 DSPy Prompt Optimization — Pending</div>
+        <div class="tl-desc">Optimize skills using 400+ outputs as training signal</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid #21262d; color: #484f58; font-size: 0.8rem;">
+    Generated by autoresearch autonomous loop · researcher_ux Platform Research · 2026-04-27
+  </div>
+
+</div>
+</body>
+</html>
