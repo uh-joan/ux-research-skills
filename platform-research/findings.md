@@ -26,7 +26,7 @@ The core pipeline (empathy map → user journey → persona → JTBD → AI oppo
 1. **Scenario mapping output gap** — 80-90% confirmed by H2 audit (13 files / ~45 expected). /research-pipeline skill addresses this.
 2. **Pain-point matrix** — fixed via auto-discovery mode (H7 shipped)
 3. **Cross-interview analysis** — addressed by semantic clustering (H1) + synthesizer (H5) + clustering skill (H9)
-4. **Figma visual deliverables** — 35+ journey maps lack visual counterparts (H6 not started — engineering work, not research)
+4. **Figma visual deliverables** — 35+ journey maps lack visual counterparts. journey-figma-creator skill exists and is hardened (H6 shipped). Generating the 35+ maps is execution work, not research.
 
 **Resolved opportunities:**
 
@@ -120,13 +120,11 @@ DI&A (most complete) and CPI (richest data) are the reference implementations. 7
 
 ## Open Questions
 
-1. **H8: Do universal clusters change the cross-domain AI opportunity rankings?** — High priority. If data fragmentation (Cluster 12) appears in 7/9 products, cross-source synthesis tools should score much higher than per-product P1 assessments suggest.
+1. **Pipeline orchestration granularity** — Per-transcript vs. per-project for /research-pipeline. Per-transcript preserves traceability; per-project is simpler. Decision left to implementation phase.
 
-2. **H8: Cluster-aware AI opportunity scoring** — now the highest priority. If Manual Correction Burden (8/9 products) and Data Fragmentation (7/9 products) are universal, AI features targeting these should score much higher than per-product P1 lists suggest.
+2. **Timing validation** — Is the 85-95% time savings claim still accurate? No explicit timing data tracked per project. Would require a controlled comparison study.
 
-3. **H2: What's the right orchestration granularity for the pipeline?** — Per-transcript vs. per-project. The former preserves traceability, the latter is simpler to orchestrate.
-
-4. **Timing validation:** Is the 85-95% time savings claim still accurate? No explicit timing data tracked per project.
+3. **Scenario gap execution** — H2 confirmed 80% gap (13/~45 expected). Closing the gap requires running /scenario-mapper across all 9 projects; this is execution work, not research.
 
 ---
 
