@@ -139,7 +139,22 @@ hypotheses:
     shipped_date: "2026-04-27"
     experiment: experiments/H9-empathy-clustering-skill/
 
-current_hypothesis: complete
+hypotheses:
+  - id: H10
+    slug: downstream-quality-audit
+    priority: 1
+    status: shipped
+    result: >
+      MIXED. File count is the wrong metric — source proximity is what matters.
+      Consolidated files with direct transcript quotes (KAI personas) are equivalent to
+      individual files. Fusion JTBD (46 jobs) is usable but cites journey map line
+      numbers, not transcripts — traceability degrades one layer. Pipeline completeness
+      was mismeasured: AI opportunities are 89% complete, scenarios 100% presence.
+      Scenario depth (not presence) is the actual gap.
+    shipped_date: "2026-04-27"
+    experiment: experiments/H10-downstream-quality-audit/
+
+current_hypothesis: ~
 current_experiment: ~
 
 metrics:
@@ -159,3 +174,4 @@ trajectory:
   - {id: H2, outcome: "Pipeline audit: empathy+journey 99% done, scenarios universal 80% gap — /research-pipeline skill created, <1s audit runtime"}
   - {id: H3, outcome: "Prompt quality analysis: FEELS CV=69%, desc depth CV=51% — 3 improvements applied to empathy-map-generator, extraction bug fixed in empathy-clustering"}
   - {id: H6, outcome: "Figma creator audit: all 5 failure modes already documented — 3 documentation gaps closed (Task prompt, screenshot table, Template Mode warning)"}
+  - {id: H10, outcome: "Downstream quality: file count wrong metric, source proximity right metric. AI opps 89% complete, scenarios 100% presence. Fusion JTBD needs quote pass. Pipeline was mismeasured."}

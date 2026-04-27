@@ -2,7 +2,7 @@
 
 **Research Question:** How can the researcher_ux UX research skills platform be improved in algorithms, workflow automation, quality, and capability gaps?
 
-**Status:** ALL 9 hypotheses shipped (H1-H9). Inner loop complete. Research concluded.
+**Status:** 10 hypotheses shipped (H1-H10). Active — new hypotheses forming from outer loop.
 
 **Last Updated:** 2026-04-27
 
@@ -84,6 +84,16 @@ The 11 universal clusters:
 
 **Strategic implication:** The AI roadmap should be organized by H1 cluster, not by product. Products that share the same universal pain cluster should co-invest in a shared capability rather than each building their own.
 
+### Pattern 6: Source Proximity, Not File Count, Predicts Research Quality [NEW — H10 RESULT]
+
+H10 compared Fusion's cross-persona JTBD synthesis (no individual files) vs. DI&A's per-transcript JTBD files, and KAI's consolidated personas overview vs. individual persona files.
+
+**Finding:** A single consolidated file with direct transcript quotes (KAI personas) is quality-equivalent to individual per-transcript files. What degrades quality is not consolidation but **citation chain length**: Fusion's JTBD cites journey map line numbers (transcript → journey → JTBD) instead of transcript quotes directly (transcript → JTBD). Traceability weakens with each intermediate hop.
+
+**The rule:** Any output format is acceptable *if* verbatim quotes trace directly to transcripts. Consolidated files save time and are not lower quality. Journey-map-as-source is the anti-pattern.
+
+**Practical implication:** The pipeline completeness metrics from H2 were wrong. Correct figures: AI opportunities 89% complete (8/9 projects), scenarios 100% presence (depth gap, not presence gap). Fusion is the only genuine hole (0 AI opportunities, JTBD lacks transcript quotes).
+
 ### Pattern 3: Pain Intensity × Source Confidence is the Right Scoring Dimension [NEW — H4 RESULT]
 
 H4 revealed that blind frequency-based confidence weighting breaks high-stakes, low-frequency signals:
@@ -124,7 +134,9 @@ DI&A (most complete) and CPI (richest data) are the reference implementations. 7
 
 2. **Timing validation** — Is the 85-95% time savings claim still accurate? No explicit timing data tracked per project. Would require a controlled comparison study.
 
-3. **Scenario gap execution** — H2 confirmed 80% gap (13/~45 expected). Closing the gap requires running /scenario-mapper across all 9 projects; this is execution work, not research.
+3. **Scenario depth gap** — H10 corrects H2: all 9 projects have ≥1 scenario file (presence = 100%). The gap is depth: most have 1 consolidated map where 3-5 would give richer coverage. This is an execution priority, not a missing-skill problem.
+
+4. **Pipeline completeness was mismeasured** (H10) — H2's "9% AI opps, 12% scenarios" used per-transcript denominators for project-level outputs. Corrected: AI opportunities 89% complete (8/9 projects), scenarios 100% presence. Only Fusion is missing AI opportunities (no JTBD to feed it).
 
 ---
 
@@ -142,3 +154,4 @@ DI&A (most complete) and CPI (richest data) are the reference implementations. 7
 | H2 | Pipeline automation | ✅ Shipped | /research-pipeline skill + audit — scenario gap confirmed (13/~45 files), Fusion JTBD=0 |
 | H3 | Prompt optimization | ✅ Shipped | FEELS quality CV=69% — prompt-driven not data-driven; 3 improvements + bug fix shipped |
 | H6 | Figma hardening | ✅ Shipped | Code audit — all 5 failure modes covered; 3 documentation gaps closed in SKILL.md |
+| H10 | Downstream quality audit | ✅ Shipped | File count wrong metric; source proximity right metric. Pipeline was mismeasured — AI opps 89% complete, scenarios 100% presence |
