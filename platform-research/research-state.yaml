@@ -85,7 +85,15 @@ hypotheses:
   - id: H6
     slug: figma-creator-hardening
     priority: 7
-    status: not_started
+    status: shipped
+    result: >
+      CONFIRMATORY. Code audit of 4 skill artifacts. All 5 failure modes (node ID staleness,
+      missing visual assets, screenshot dimensions, floating nodes, font order) already documented
+      and fixed. 3 minor gaps found and closed: Task tool prompt now references QUICK_REFERENCE.md
+      and gold standard JS; screenshot width table added to SKILL.md execution steps; Template Mode
+      gets explicit node ID staleness warning. Architectural fix (single execution via Task tool) is
+      complete and consistent across all 4 artifacts.
+    shipped_date: "2026-04-27"
     experiment: experiments/H6-figma-creator-hardening/
 
   - id: H7
@@ -131,8 +139,8 @@ hypotheses:
     shipped_date: "2026-04-27"
     experiment: experiments/H9-empathy-clustering-skill/
 
-current_hypothesis: H6
-current_experiment: experiments/H6-figma-creator-hardening/
+current_hypothesis: complete
+current_experiment: ~
 
 metrics:
   primary: "Validated improvements shipped (skills updated/created)"
@@ -150,3 +158,4 @@ trajectory:
   - {id: H8, outcome: "3 platform capability themes emerge from cluster-aware scoring: Data Synthesis, Trust/RAG, NL Automation — 22/24 re-ranked, 4 demoted"}
   - {id: H2, outcome: "Pipeline audit: empathy+journey 99% done, scenarios universal 80% gap — /research-pipeline skill created, <1s audit runtime"}
   - {id: H3, outcome: "Prompt quality analysis: FEELS CV=69%, desc depth CV=51% — 3 improvements applied to empathy-map-generator, extraction bug fixed in empathy-clustering"}
+  - {id: H6, outcome: "Figma creator audit: all 5 failure modes already documented — 3 documentation gaps closed (Task prompt, screenshot table, Template Mode warning)"}

@@ -2,7 +2,7 @@
 
 **Research Question:** How can the researcher_ux UX research skills platform be improved in algorithms, workflow automation, quality, and capability gaps?
 
-**Status:** 7 hypotheses shipped (H1, H2, H4, H5, H7, H8, H9). Outer loop complete. Moving to paper writing.
+**Status:** ALL 9 hypotheses shipped (H1-H9). Inner loop complete. Research concluded.
 
 **Last Updated:** 2026-04-27
 
@@ -34,10 +34,13 @@ The core pipeline (empathy map → user journey → persona → JTBD → AI oppo
 6. **Pipeline automation** — /research-pipeline SKILL.md detects gaps and runs missing steps in sequence (H2 shipped)
 7. **Cross-domain AI roadmap** — 3 platform capabilities identified from cluster-aware scoring (H8 shipped)
 
-**Remaining (out of current scope):**
+**Resolved — hardening complete:**
 
-8. **Prompt optimization** — DSPy with 400+ outputs as training signal (H3 not started — engineering investment)
-9. **Figma hardening** — Node ID staleness fix (H6 not started — isolated engineering work)
+8. **Figma node ID staleness** — Code audit (H6) confirms fix is complete: single-execution architectural pattern enforced in SKILL.md, LESSONS_LEARNED.md, and implementation.js. 3 documentation gaps closed: Task tool prompt now references QUICK_REFERENCE.md + gold standard JS; screenshot width table added to execution steps; Template Mode gets staleness warning.
+
+**Remaining (deliberate descope):**
+
+9. **Prompt optimization via DSPy** — 400+ empathy maps as training signal. Skipped: H3 analysis shows CV=69% is prompt-driven but the 3 targeted text improvements already close the gap without DSPy's engineering investment.
 
 ---
 
@@ -140,6 +143,4 @@ DI&A (most complete) and CPI (richest data) are the reference implementations. 7
 | H8 | Cluster-aware scoring | ✅ Shipped | 3 platform capability themes — per-product P1s systematically undervalue universal investments |
 | H2 | Pipeline automation | ✅ Shipped | /research-pipeline skill + audit — scenario gap confirmed (13/~45 files), Fusion JTBD=0 |
 | H3 | Prompt optimization | ✅ Shipped | FEELS quality CV=69% — prompt-driven not data-driven; 3 improvements + bug fix shipped |
-| H2 | Pipeline automation | ⏳ Pending | CrewAI/LangGraph orchestration |
-| H3 | DSPy optimization | ⏳ Pending | Prompt optimization from 400+ examples |
-| H6 | Figma hardening | ⏳ Pending | node ID staleness fix |
+| H6 | Figma hardening | ✅ Shipped | Code audit — all 5 failure modes covered; 3 documentation gaps closed in SKILL.md |

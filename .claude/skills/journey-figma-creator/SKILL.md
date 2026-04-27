@@ -94,7 +94,12 @@ When the user provides a markdown file path or asks to create a journey map from
 Use Task tool with:
 - subagent_type: "general-purpose"
 - description: "Create [journey name] in Figma"
-- prompt: "Create complete journey map for [NAME] by reading [PATH] and following .claude/skills/journey-figma-creator/implementation.js structure"
+- prompt: "Create complete journey map for [NAME] by:
+    1. Reading the journey markdown at [PATH]
+    2. Reading .claude/skills/journey-figma-creator/QUICK_REFERENCE.md (critical patterns)
+    3. Reading .claude/skills/journey-figma-creator/implementation.js (code structure)
+    4. Following DI&A/journey/marcus-chen-template-journey.js as the gold standard implementation
+    All steps (font loading, Section creation, frame creation, content) MUST be in ONE figma_execute call."
 ```
 
 **❌ NEVER DO THIS:**
@@ -257,10 +262,17 @@ Use Task tool with:
    - Key Insights (middle): Extracted from emotional journey analysis
    - Opportunity Areas (right): Top opportunities from the list
 
-9. **Screenshot validation (OPTIONAL - may cause size errors):**
-   - DO NOT include screenshot in Task prompt for large journeys (>6 phases)
-   - Screenshot can be taken manually afterward if needed
-   - If included, use scale=0.5 to avoid >8000px dimension errors
+9. **Screenshot validation (OPTIONAL - choose scale by journey width):**
+
+   | Journey Width | Scale | Tool |
+   |---|---|---|
+   | <2000px | 2 | `figma_take_screenshot` |
+   | 2000-4000px | 1 | `figma_take_screenshot` |
+   | 4000-8000px | 1 | `figma_capture_screenshot` |
+   | >8000px | — | Skip (too wide for API) |
+
+   - DO NOT screenshot journeys >8000px wide — API will return 400 error
+   - For >6 phases or wide layouts: skip screenshot, the map was created successfully
 
 ---
 
@@ -315,6 +327,16 @@ https://www.figma.com/design/mE4eNMq71OOXSkH4SihpnX/User-journey---template
 - Column 1 (Actions): Populated from `**Actions:**` section
 - Column 2 (Mindsets): Populated from `**Mindsets:**` section
 - Column 3 (Pain Points): Populated from `**Pain Points:**` section
+
+### Template Mode: Node ID Staleness Warning
+
+**CRITICAL:** Template Mode is also subject to the node ID staleness constraint.
+
+- ✅ Clone template AND populate all content in ONE `figma_execute` call
+- ❌ DO NOT clone template in one call, then look up nodes by ID in a second call
+- ❌ DO NOT use `getNodeByIdAsync()` across separate `figma_execute` calls
+
+If template cloning and content population must be split, fall back to Default Mode (implementation.js).
 
 ### Template Mode Best Practices
 
