@@ -68,6 +68,8 @@ build/
 /[A-Z][A-Z0-9]*/
 # Whitelist research workspace (case-insensitive FS on macOS causes false match above)
 !platform-research/
+# Whitelist automated clustering outputs in project dirs (raw project files remain excluded)
+!DI&A/empathy-maps/clustering-analysis-automated.md
 
 # Docs folder (except specific public docs)
 /docs/

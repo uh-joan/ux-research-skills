@@ -84,7 +84,7 @@ DI&A (most complete) and CPI (richest data) are the reference implementations. 7
 
 2. **Workflow sequence violations compound** — CPI personas were created before empathy maps; this error propagated through the entire pipeline. Sequence enforcement is not optional.
 
-3. **Manual clustering is the bottleneck** — DI&A clustering-analysis.md is the best artifact in the entire repo but only exists for one project. H9 (empathy-clustering skill) fixes this.
+3. **Manual clustering is the bottleneck — now solved** — DI&A clustering-analysis.md is the best artifact in the entire repo. H9 shipped: `/empathy-clustering [project]` runs in <10 seconds and recovers all manual themes plus additional emotional nuances. Any project with 3+ empathy maps can now get clustering.
 
 4. **Node ID staleness is a hard constraint in Figma** — the fix must be architectural (single execution), not a retry loop.
 
@@ -98,7 +98,7 @@ DI&A (most complete) and CPI (richest data) are the reference implementations. 7
 
 1. **H8: Do universal clusters change the cross-domain AI opportunity rankings?** — High priority. If data fragmentation (Cluster 12) appears in 7/9 products, cross-source synthesis tools should score much higher than per-product P1 assessments suggest.
 
-2. **H9: Can the empathy-clustering skill run accurately on projects with <5 empathy maps?** — MASS has 3 maps; OFFX format is different. Minimum viable dataset size needs testing.
+2. **H8: Cluster-aware AI opportunity scoring** — now the highest priority. If Manual Correction Burden (8/9 products) and Data Fragmentation (7/9 products) are universal, AI features targeting these should score much higher than per-product P1 lists suggest.
 
 3. **H2: What's the right orchestration granularity for the pipeline?** — Per-transcript vs. per-project. The former preserves traceability, the latter is simpler to orchestrate.
 
@@ -115,8 +115,8 @@ DI&A (most complete) and CPI (richest data) are the reference implementations. 7
 | H7 | Pain-matrix autogen | ✅ Shipped | Auto-discovery mode added |
 | H1 | Semantic clustering | ✅ Shipped | 11 universal clusters, 14 total, 12% noise |
 | H4 | Confidence propagation | ✅ Shipped | Pain-modulated confidence is correct design |
-| H9 | Empathy-clustering skill | 🔄 Next | Productize H1 pipeline as skill |
-| H8 | Cluster-aware scoring | ⏳ Soon | Apply H1 clusters to AI opportunity weights |
+| H9 | Empathy-clustering skill | ✅ Shipped | 8 clusters, 4% noise, <10s — all DI&A themes recovered |
+| H8 | Cluster-aware scoring | 🔄 Next | Apply H1 clusters to AI opportunity weights |
 | H2 | Pipeline automation | ⏳ Pending | CrewAI/LangGraph orchestration |
 | H3 | DSPy optimization | ⏳ Pending | Prompt optimization from 400+ examples |
 | H6 | Figma hardening | ⏳ Pending | node ID staleness fix |

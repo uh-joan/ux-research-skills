@@ -108,14 +108,16 @@ hypotheses:
     prediction: >
       New skill produces clustering-analysis.md in <10 minutes for any project with 3+ empathy maps.
     priority: 2
-    status: not_started
-    confidence_prior: high
-    feasibility: high
-    expected_impact: high
+    status: shipped
+    result: >
+      CONFIRMATORY and exceeded prediction. Single-project (DI&A, 21 maps, 137 entries): 8 clusters,
+      4% noise, <10 seconds runtime (vs predicted <10 minutes). All 4 manual DI&A themes recovered.
+      4 additional emotional nuances surfaced. Skill callable as /empathy-clustering [project].
+    shipped_date: "2026-04-27"
     experiment: experiments/H9-empathy-clustering-skill/
 
-current_hypothesis: H9
-current_experiment: experiments/H9-empathy-clustering-skill/
+current_hypothesis: H8
+current_experiment: experiments/H8-cluster-aware-scoring/
 
 metrics:
   primary: "Validated improvements shipped (skills updated/created)"
@@ -129,3 +131,4 @@ trajectory:
   - {id: H7, outcome: "pain-point-matrix auto-discovery shipped"}
   - {id: H1, outcome: "11 universal FEELS clusters across 9 products — CONFIRMED beyond prediction"}
   - {id: H4, outcome: "Blind confidence weighting breaks high-pain signals — needs pain-modulation"}
+  - {id: H9, outcome: "empathy-clustering skill ships — <10s runtime, 8 clusters, 4% noise on DI&A — all manual themes recovered"}
