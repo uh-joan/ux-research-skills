@@ -75,6 +75,7 @@ build/
 /docs/
 !/docs/ai-powered-ux-workflow.md
 !/docs/interview-guide.md
+!/docs/meta-skills-reference.md
 
 # Specific skills to ignore
 /.claude/skills/mental-model-diagram/

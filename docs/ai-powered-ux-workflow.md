@@ -124,6 +124,31 @@ Use this workflow when starting a new project to systematically transform raw in
 
 ---
 
+### Step 1b (Optional): Cluster Pain Patterns Across Participants
+**Skill:** `empathy-clustering`
+**Input:** 3+ empathy maps from Step 1
+**Output:** `[PROJECT]/empathy-maps/clustering-analysis.md`
+
+**Purpose:** Find which emotional pain patterns are shared across participants vs. unique to individuals. Useful before persona creation — it pre-segments users by emotional profile rather than just behavioral patterns.
+
+**When to use:** When you have 3+ empathy maps and want to know which FEELS entries cluster together before manually deciding how to group users into personas.
+
+**Process:**
+```bash
+# After generating 3+ empathy maps:
+/empathy-clustering [PROJECT]
+# Output: clustering-analysis.md with clusters, noise %, universality labels
+```
+
+**What you get:**
+- Clusters of emotionally similar participants (e.g., "Data Fragmentation Fatigue" group vs. "AI Opportunity Excitement" group)
+- Noise points: participants with truly idiosyncratic pain profiles
+- Universality label per cluster: how many participants share it
+
+**Skip if:** You have fewer than 3 empathy maps, or you're doing per-user analysis and don't need cross-participant patterns.
+
+---
+
 ### Step 2: Map User Journeys (Workflows)
 **Skill:** `user-journey`
 **Input:** Interview transcripts (same as Step 1)
@@ -306,6 +331,103 @@ So I can [outcome]
 
 ---
 
+## Complete Workflow Summary
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  INPUT: Interview Transcripts (9-16 per project)               │
+└─────────────────────────────────────────────────────────────────┘
+                           │
+           ┌───────────────┴───────────────┐
+           │                               │
+           ▼                               ▼
+┌─────────────────────────┐    ┌─────────────────────────┐
+│  STEP 1: EMPATHY MAPS   │    │  STEP 2: USER JOURNEYS  │
+│  (empathy-map-generator)│    │  (user-journey)         │
+│  • SAYS/THINKS/DOES/    │    │  • Workflow phases      │
+│    FEELS quadrants      │    │  • Emotional trajectory │
+│  • Verbatim quotes      │    │  • Pain points          │
+│  • Pain intensity       │    │  • Opportunities        │
+└─────────────────────────┘    └─────────────────────────┘
+           │                               │
+           ├──── [OPTIONAL] ───────────────┤
+           │                               │
+           ▼                               │
+┌─────────────────────────┐               │
+│  STEP 1b: PAIN CLUSTER  │               │
+│  (empathy-clustering)   │               │
+│  • Groups participants  │               │
+│    by shared FEELS      │               │
+│  • Universal vs. niche  │               │
+│    pain patterns        │               │
+│  • Informs persona      │               │
+│    segmentation         │               │
+└─────────────────────────┘               │
+           │                               │
+           └───────────────┬───────────────┘
+                           ▼
+           ┌───────────────────────────────┐
+           │  STEP 3: PERSONAS             │
+           │  (persona-generator)          │
+           │  • Cluster behaviors across   │
+           │    empathy + journeys         │
+           │  • 3-5 composite personas     │
+           │  • Attitudinal + behavioral   │
+           └───────────────────────────────┘
+                           │
+           ┌───────────────┴───────────────┐
+           ▼                               ▼
+┌─────────────────────────┐    ┌─────────────────────────┐
+│  STEP 4: JTBD ANALYSIS  │    │  (Personas provide      │
+│  (jtbd-analyzer)        │◄───┤   trust context for     │
+│  • From transcripts OR  │    │   AI opportunities)     │
+│    journeys OR empathy  │    │                         │
+│  • Individual + cross-  │    │                         │
+│    persona extraction   │    │                         │
+└─────────────────────────┘    └─────────────────────────┘
+           │
+           └───────────────┬───────────────┐
+                           │               │
+                           ▼               ▼
+           ┌───────────────────┐  ┌───────────────────────┐
+           │  STEP 5: SCENARIOS│  │  STEP 6: AI           │
+           │  (scenario-mapper)│  │  OPPORTUNITIES        │
+           │  • From JTBD +    │  │  (ai-opportunity-     │
+           │    personas       │  │   analyzer)           │
+           │  • User stories   │  │  • From JTBD +        │
+           │  • Feature        │  │    personas           │
+           │    concepts       │  │  • 3D scoring matrix  │
+           │  • Acceptance     │  │  • Priority tiers     │
+           │    criteria       │  │    (P1/P2/P3/P4)      │
+           └───────────────────┘  └───────────────────────┘
+                           │               │
+                           └───────┬───────┘
+                                   ▼
+           ┌───────────────────────────────────────────────┐
+           │  STEP 7 (Optional): FIGMA VISUALS             │
+           │  (journey-figma-creator)                      │
+           │  • Visual journey maps for stakeholders       │
+           │  • Requires Figma Desktop Bridge plugin       │
+           └───────────────────────────────────────────────┘
+                                   ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  OUTPUT: Strategic Deliverables                                 │
+│  ✓ Evidence-based product roadmap                              │
+│  ✓ Prioritized feature backlog (Priority 1/2/3/4)              │
+│  ✓ Visual artifacts for stakeholder alignment                  │
+│  ✓ Research-grounded design decisions                          │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Key Workflow Characteristics:**
+- **Parallel Processing:** Steps 1 & 2 run simultaneously (saves 2-3 days)
+- **Optional Clustering:** Step 1b runs after 3+ empathy maps; feeds emotional segmentation into Step 3
+- **Flexible JTBD:** Can use transcripts, journeys, or empathy maps as input
+- **Dual Outputs:** Steps 5 & 6 run in parallel from JTBD
+- **Complete Personas:** Require both empathy (attitudinal) + journeys (behavioral)
+
+---
+
 ## Time Savings vs. Traditional Research
 
 | Traditional Process | AI-Powered Process | Time Saved |
@@ -337,8 +459,13 @@ cd project-name
 # Run user-journey for each transcript
 # Output: journey/[participant-name]-journey-YYYY-MM-DD.md
 
+# 3b. (Optional) Cluster pain patterns (Step 1b) — run after 3+ empathy maps
+# /empathy-clustering MT360
+# Output: empathy-maps/clustering-analysis.md
+
 # 4. Create personas (Step 3)
 # Run persona-generator on transcripts + empathy maps + journey maps
+# (clustering-analysis.md can inform grouping decisions)
 # Output: personas/[persona-name]-persona-YYYY-MM-DD.md
 
 # 5. Extract JTBD (Step 4)
