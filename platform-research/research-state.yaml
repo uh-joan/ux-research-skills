@@ -4,8 +4,8 @@ research_question: >
   How can the researcher_ux UX research skills platform be improved in algorithms,
   workflow automation, quality, and capability gaps — leveraging the existing 53-interview
   dataset across 9 product domains and modern AI techniques from the Orchestra ecosystem?
-status: bootstrapped
-current_phase: inner_loop
+status: active
+current_phase: outer_loop
 started: "2026-04-27"
 last_updated: "2026-04-27"
 
@@ -21,130 +21,101 @@ bootstrap:
     output_volume: "400+ markdown deliverables across 9 domains"
     skill_maturity: "5 production (empathy/journey/persona/jtbd/ai-opps), 6 beta/concept"
     largest_gaps:
-      - "Scenario mapping: 80-90% output gap (only 1-2 files per project vs 10-15 expected)"
+      - "Scenario mapping: 80-90% output gap"
       - "Pain-point matrix: 1 file total across all 9 projects"
-      - "Cross-interview analysis: zero systematic pattern detection across 53 interviews"
-      - "Visual journey maps: most lack Figma counterparts due to node ID staleness"
+      - "Cross-interview analysis: zero systematic pattern detection"
       - "Confidence propagation: low-confidence JTBD pollutes AI opportunity scoring"
-      - "Pipeline fragmentation: no end-to-end automation, every skill manually triggered"
+      - "Pipeline fragmentation: every skill manually triggered"
 
 hypotheses:
   - id: H1
     slug: semantic-clustering
-    statement: >
-      Semantic vector embeddings over interview quotes would enable automated
-      cross-interview pattern detection, replacing the current manual clustering-analysis.md
-      workflow and revealing universal pain points invisible at per-project scope.
-    prediction: >
-      Clustering FEELS quadrant entries from all 53 interviews using sentence-transformers
-      would surface 5-8 universal pain clusters spanning multiple product domains.
     priority: 1
-    status: in_progress
-    confidence_prior: high
-    feasibility: high
-    expected_impact: high
+    status: shipped
+    result: >
+      661 FEELS entries, 104 empathy maps. UMAP+HDBSCAN: 14 clusters, 12% noise.
+      11/14 universal (5+ products). Key: AI Ambivalence (162 entries, 7/9), Data Fragmentation
+      (26 entries, 7/9), Manual Correction Burden (69 entries, 8/9). DI&A manual clusters recovered.
+    shipped_date: "2026-04-27"
     experiment: experiments/H1-semantic-clustering/
 
   - id: H2
     slug: pipeline-automation
-    statement: >
-      A multi-agent orchestration (CrewAI or LangGraph) running empathy → persona → JTBD
-      as a single automated pipeline would reduce per-project analysis time from 1-2 days
-      to 2-4 hours by eliminating manual skill-triggering overhead.
-    prediction: >
-      A prototype pipeline processing 8-12 transcripts would complete in under 4 hours
-      with equivalent output quality to manually triggered skills.
     priority: 3
     status: not_started
-    confidence_prior: medium
-    feasibility: medium
-    expected_impact: high
     experiment: experiments/H2-pipeline-automation/
 
   - id: H3
     slug: prompt-optimization-dspy
-    statement: >
-      DSPy-based prompt optimization using the 400+ existing skill outputs as labeled
-      examples would improve output quality on completeness and traceability metrics.
-    prediction: >
-      Optimized prompts would reduce sparse sections (<5 items) by 40%+ and increase
-      quote-grounded insights by 25%+ compared to current hand-written prompts.
     priority: 6
     status: not_started
-    confidence_prior: medium
-    feasibility: medium
-    expected_impact: medium
     experiment: experiments/H3-dspy-prompt-optimization/
 
   - id: H4
     slug: confidence-propagation
-    statement: >
-      Adding a confidence weighting layer to ai-opportunity-analyzer that discounts
-      JTBD jobs from single-source transcripts would reduce false Priority 1 assessments.
-    prediction: >
-      Applying confidence weighting to CPI's 17 opportunities would reclassify 25-35%
-      from Priority 1, giving a more defensible roadmap.
     priority: 5
-    status: not_started
-    confidence_prior: high
-    feasibility: high
-    expected_impact: medium
+    status: shipped
+    result: >
+      DISCONFIRMATORY but revelatory. Blind confidence weighting reclassified 43% P1 (predicted
+      25-35%), BUT critically demoted MENA/Brazil (P0, 9/10 pain) to P4 — false demotion.
+      Key finding: pain-modulated confidence is correct. High pain (≥8/10) = no frequency penalty.
+      Medium pain = mild penalty. Low pain = standard penalty.
+    shipped_date: "2026-04-27"
     experiment: experiments/H4-confidence-propagation/
 
   - id: H5
     slug: cross-project-meta-analysis
-    statement: >
-      A new cross-project-synthesizer skill reading outputs across all 9 product domains
-      would reveal universal pain archetypes, shared persona patterns, and cross-domain
-      AI opportunities currently invisible at per-project scope.
-    prediction: >
-      Analysis of all 53 interviews would identify 3-5 pain points universal to Clarivate
-      research workflows, plus 2-3 persona archetypes appearing across multiple products.
     priority: 2
     status: shipped
-    result: "New skill cross-project-synthesizer written. Auto-discovers all project folders, runs 4 analyses (universal pains, persona archetypes, cross-domain AI opps, maturity assessment), outputs meta-findings.md for leadership."
+    result: "cross-project-synthesizer skill created with auto-discovery mode"
     shipped_date: "2026-04-27"
-    confidence_prior: high
-    feasibility: high
-    expected_impact: high
     experiment: experiments/H5-cross-project-synthesizer/
 
   - id: H6
     slug: figma-creator-hardening
-    statement: >
-      Enforcing single-subagent execution in journey-figma-creator (to prevent node ID
-      staleness) and adding a template-clone fallback would unlock visual deliverables
-      for the 35+ journey maps currently lacking visual counterparts.
-    prediction: >
-      Updated SKILL.md + subagent enforcement would enable successful visual creation
-      for 80%+ of existing journey maps on first attempt.
     priority: 7
     status: not_started
-    confidence_prior: medium
-    feasibility: medium
-    expected_impact: medium
     experiment: experiments/H6-figma-creator-hardening/
 
   - id: H7
     slug: pain-matrix-autogen
-    statement: >
-      A pain-point-matrix skill refactor that auto-reads FEELS quadrant entries and
-      journey map pain points from existing files would auto-generate the severity×frequency
-      matrix without requiring manual extraction — filling the biggest output gap.
-    prediction: >
-      The updated skill would produce complete pain matrices for all 9 projects using
-      the 400+ existing empathy maps and journey maps as inputs.
     priority: 4
     status: shipped
-    result: "pain-point-matrix SKILL.md updated with Auto-Discovery Mode section: scans empathy-maps/, journey/, jtbd/ automatically. Added concrete extraction patterns matching actual file format (FEELS emoji/intensity signals, journey Pain Points sections). Added confidence scoring and frequency inference from JTBD labels."
+    result: "pain-point-matrix SKILL.md refactored with auto-discovery mode"
     shipped_date: "2026-04-27"
+    experiment: experiments/H7-pain-matrix-autogen/
+
+  - id: H8
+    slug: cluster-aware-ai-opportunity-scoring
+    statement: >
+      Using H1 universal cluster taxonomy as weights in ai-opportunity-analyzer would
+      produce a more strategically defensible cross-domain AI roadmap.
+    prediction: >
+      Rerunning cross-project AI opportunity scoring with cluster-aware weights surfaces
+      3-5 platform-level AI investments distinct from current per-product P1 lists.
+    priority: 3
+    status: not_started
     confidence_prior: high
     feasibility: high
     expected_impact: high
-    experiment: experiments/H7-pain-matrix-autogen/
+    experiment: experiments/H8-cluster-aware-scoring/
 
-current_hypothesis: H4
-current_experiment: experiments/H4-confidence-propagation/protocol.md
+  - id: H9
+    slug: empathy-clustering-skill
+    statement: >
+      Productizing the H1 pipeline as a SKILL.md + implementation enables automatic
+      cross-domain FEELS clustering for any project with 3+ interviews.
+    prediction: >
+      New skill produces clustering-analysis.md in <10 minutes for any project with 3+ empathy maps.
+    priority: 2
+    status: not_started
+    confidence_prior: high
+    feasibility: high
+    expected_impact: high
+    experiment: experiments/H9-empathy-clustering-skill/
+
+current_hypothesis: H9
+current_experiment: experiments/H9-empathy-clustering-skill/
 
 metrics:
   primary: "Validated improvements shipped (skills updated/created)"
@@ -152,5 +123,9 @@ metrics:
   proxy_quality: "Quote-traceability rate (claims backed by user quotes)"
   secondary: "Cross-project universal patterns discovered"
 
-direction: inner_loop
-trajectory: []
+direction: outer_loop
+trajectory:
+  - {id: H5, outcome: "cross-project-synthesizer skill shipped"}
+  - {id: H7, outcome: "pain-point-matrix auto-discovery shipped"}
+  - {id: H1, outcome: "11 universal FEELS clusters across 9 products — CONFIRMED beyond prediction"}
+  - {id: H4, outcome: "Blind confidence weighting breaks high-pain signals — needs pain-modulation"}
