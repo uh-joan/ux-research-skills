@@ -1,0 +1,66 @@
+[
+  {
+    "project": "MASS",
+    "n_maps": 3,
+    "n_entries": 87,
+    "n_clusters": 9,
+    "noise_pct": 0.092,
+    "output": "/Users/joan.saez-pons/code/researcher_ux/MASS/empathy-maps/clustering-analysis-automated.md"
+  },
+  {
+    "project": "CPI",
+    "n_maps": 10,
+    "n_entries": 80,
+    "n_clusters": 4,
+    "noise_pct": 0.013,
+    "output": "/Users/joan.saez-pons/code/researcher_ux/CPI/empathy-maps/clustering-analysis-automated.md"
+  },
+  {
+    "project": "CDDI",
+    "n_maps": 20,
+    "n_entries": 107,
+    "n_clusters": 7,
+    "noise_pct": 0.14,
+    "output": "/Users/joan.saez-pons/code/researcher_ux/CDDI/empathy-maps/clustering-analysis-automated.md"
+  },
+  {
+    "project": "Fusion",
+    "n_maps": 21,
+    "n_entries": 226,
+    "n_clusters": 18,
+    "noise_pct": 0.137,
+    "output": "/Users/joan.saez-pons/code/researcher_ux/Fusion/empathy-maps/clustering-analysis-automated.md"
+  },
+  {
+    "project": "PT",
+    "n_maps": 7,
+    "n_entries": 51,
+    "n_clusters": 4,
+    "noise_pct": 0.039,
+    "output": "/Users/joan.saez-pons/code/researcher_ux/PT/empathy-maps/clustering-analysis-automated.md"
+  },
+  {
+    "project": "MT360",
+    "n_maps": 6,
+    "n_entries": 42,
+    "n_clusters": 3,
+    "noise_pct": 0.024,
+    "output": "/Users/joan.saez-pons/code/researcher_ux/MT360/empathy-maps/clustering-analysis-automated.md"
+  },
+  {
+    "project": "KAI",
+    "n_maps": 5,
+    "n_entries": 33,
+    "n_clusters": 3,
+    "noise_pct": 0.061,
+    "output": "/Users/joan.saez-pons/code/researcher_ux/KAI/empathy-maps/clustering-analysis-automated.md"
+  },
+  {
+    "project": "OFFX",
+    "n_maps": 12,
+    "n_entries": 72,
+    "n_clusters": 3,
+    "noise_pct": 0.306,
+    "output": "/Users/joan.saez-pons/code/researcher_ux/OFFX/empathy-maps/clustering-analysis-automated.md"
+  }
+]

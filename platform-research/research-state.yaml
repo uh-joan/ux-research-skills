@@ -6,6 +6,7 @@ research_question: >
   dataset across 9 product domains and modern AI techniques from the Orchestra ecosystem?
 status: complete
 current_phase: concluded
+hypotheses_shipped: 13
 started: "2026-04-27"
 last_updated: "2026-04-27"
 
@@ -199,3 +200,4 @@ trajectory:
   - {id: H10, outcome: "Downstream quality: file count wrong metric, source proximity right metric. AI opps 89% complete, scenarios 100% presence. Fusion JTBD needs quote pass. Pipeline was mismeasured."}
   - {id: H11, outcome: "Traceability audit: 148 files, 2% low-density. Quote starvation cascade — PT JTBD 3.66 → AI opps 0.03. Structural gap in ai-opportunity-analyzer + scenario-mapper fixed with quality gate."}
   - {id: H12, outcome: "Scenario depth: DISCONFIRMATORY — projects have 5-31 numbered scenarios within files. No depth gap. Research program complete."}
+  - {id: H13, outcome: "Per-project clustering: all 9 projects clustered in 5.6s. Entry density (not map count) predicts cluster richness. ~65% local clusters match H1 universal taxonomy. 5+ projects have novel local-only clusters."}

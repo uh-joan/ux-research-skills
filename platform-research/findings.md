@@ -2,7 +2,7 @@
 
 **Research Question:** How can the researcher_ux UX research skills platform be improved in algorithms, workflow automation, quality, and capability gaps?
 
-**Status:** 12 hypotheses shipped (H1-H12). **RESEARCH COMPLETE.**
+**Status:** 13 hypotheses shipped (H1-H13). **RESEARCH COMPLETE.**
 
 **Last Updated:** 2026-04-27
 
@@ -83,6 +83,25 @@ The 11 universal clusters:
 **The 4 demoted items** (Multi-Parameter Candidate Screening, Literature Summarization, Chemistry-Biology AI, Evidence Change Alerting) are product-specific investments that should NOT receive shared platform resources.
 
 **Strategic implication:** The AI roadmap should be organized by H1 cluster, not by product. Products that share the same universal pain cluster should co-invest in a shared capability rather than each building their own.
+
+### Pattern 8: Entry Density Predicts Cluster Richness, Not Map Count [NEW — H13 RESULT]
+
+H13 ran per-project empathy clustering across all 9 projects (8 new + DI&A from H9). All projects produce meaningful clusters.
+
+**The key finding:** Total FEELS entries, not empathy map count, determines how many clusters emerge. MASS (3 maps, 29 entries/map = 87 entries) produces 9 clusters — more than any project except Fusion. DI&A (21 maps, 6.5 entries/map = 137 entries) produces 8 clusters. Entry density is the real variable.
+
+**Per-project clusters confirm H1's universal taxonomy locally:** ~65% of per-project clusters map to the 11 global H1 themes, appearing independently in each project's data without cross-project averaging.
+
+**Project-specific clusters (not in H1 taxonomy):**
+- **PT**: Collaborative solidarity — PT users feel explicit burden-sharing with colleagues (no H1 equivalent)
+- **OFFX**: Intellectual engagement — pure positive research stimulation, distinct from H1 C1 (Achievement Satisfaction)
+- **KAI**: Vigilance pattern — regulatory watchfulness combined with enthusiasm
+- **MASS**: Formulary workflow pain — highly specific market access cluster absent from all other products
+- **Fusion**: Craft/mastery around synthesis — process pleasure, not outcome pride
+
+**Methodological note:** The FEELS extraction bug found during H13 (simplified `\n##` regex matching `\n###`) only affected the experiment scripts; the production `/empathy-clustering` SKILL.md uses position-based extraction and correctly handles both standard and MASS-format empathy maps.
+
+---
 
 ### Pattern 7: Quote Starvation Cascades Through Synthesis Skills [NEW — H11 RESULT]
 
@@ -175,3 +194,4 @@ DI&A (most complete) and CPI (richest data) are the reference implementations. 7
 | H10 | Downstream quality audit | ✅ Shipped | File count wrong metric; source proximity right metric. Pipeline was mismeasured — AI opps 89% complete, scenarios 100% presence |
 | H11 | Traceability audit | ✅ Shipped | 148 files, 2% low-density. Quote starvation cascade: PT JTBD→AI opps drops 3.66→0.03. Quality gate added to ai-opportunity-analyzer + scenario-mapper |
 | H12 | Scenario depth | ✅ Shipped | DISCONFIRMATORY — no depth gap. Projects have 5-31 scenarios within files. H10 "depth gap" was file-count artifact. Research complete. |
+| H13 | Per-project clustering | ✅ Shipped | All 9 projects clustered. Entry density (not map count) drives cluster richness. ~65% of local clusters match H1 universal taxonomy. 5+ projects have novel local-only clusters. |
