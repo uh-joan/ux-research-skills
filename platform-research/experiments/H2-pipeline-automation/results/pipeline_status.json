@@ -1,0 +1,569 @@
+{
+  "projects": {
+    "CDDI": {
+      "n_transcripts": 17,
+      "steps": {
+        "empathy-maps": {
+          "n": 20,
+          "pct": 1.18,
+          "complete": true
+        },
+        "journey": {
+          "n": 22,
+          "pct": 1.29,
+          "complete": true
+        },
+        "personas": {
+          "n": 6,
+          "pct": 0.35,
+          "complete": false
+        },
+        "jtbd": {
+          "n": 18,
+          "pct": 1.06,
+          "complete": true
+        },
+        "ai-opportunities": {
+          "n": 1,
+          "pct": 0.06,
+          "complete": false
+        },
+        "scenarios": {
+          "n": 4,
+          "pct": 0.24,
+          "complete": false
+        }
+      }
+    },
+    "CPI": {
+      "n_transcripts": 10,
+      "steps": {
+        "empathy-maps": {
+          "n": 10,
+          "pct": 1.0,
+          "complete": true
+        },
+        "journey": {
+          "n": 14,
+          "pct": 1.4,
+          "complete": true
+        },
+        "personas": {
+          "n": 5,
+          "pct": 0.5,
+          "complete": false
+        },
+        "jtbd": {
+          "n": 10,
+          "pct": 1.0,
+          "complete": true
+        },
+        "ai-opportunities": {
+          "n": 3,
+          "pct": 0.3,
+          "complete": false
+        },
+        "scenarios": {
+          "n": 2,
+          "pct": 0.2,
+          "complete": false
+        }
+      }
+    },
+    "DI&A": {
+      "n_transcripts": 21,
+      "steps": {
+        "empathy-maps": {
+          "n": 21,
+          "pct": 1.0,
+          "complete": true
+        },
+        "journey": {
+          "n": 25,
+          "pct": 1.19,
+          "complete": true
+        },
+        "personas": {
+          "n": 6,
+          "pct": 0.29,
+          "complete": false
+        },
+        "jtbd": {
+          "n": 25,
+          "pct": 1.19,
+          "complete": true
+        },
+        "ai-opportunities": {
+          "n": 1,
+          "pct": 0.05,
+          "complete": false
+        },
+        "scenarios": {
+          "n": 1,
+          "pct": 0.05,
+          "complete": false
+        }
+      }
+    },
+    "Fusion": {
+      "n_transcripts": 21,
+      "steps": {
+        "empathy-maps": {
+          "n": 21,
+          "pct": 1.0,
+          "complete": true
+        },
+        "journey": {
+          "n": 21,
+          "pct": 1.0,
+          "complete": true
+        },
+        "personas": {
+          "n": 4,
+          "pct": 0.19,
+          "complete": false
+        },
+        "jtbd": {
+          "n": 0,
+          "pct": 0.0,
+          "complete": false
+        },
+        "ai-opportunities": {
+          "n": 0,
+          "pct": 0.0,
+          "complete": false
+        },
+        "scenarios": {
+          "n": 1,
+          "pct": 0.05,
+          "complete": false
+        }
+      }
+    },
+    "KAI": {
+      "n_transcripts": 10,
+      "steps": {
+        "empathy-maps": {
+          "n": 5,
+          "pct": 0.5,
+          "complete": false
+        },
+        "journey": {
+          "n": 5,
+          "pct": 0.5,
+          "complete": false
+        },
+        "personas": {
+          "n": 0,
+          "pct": 0.0,
+          "complete": false
+        },
+        "jtbd": {
+          "n": 5,
+          "pct": 0.5,
+          "complete": false
+        },
+        "ai-opportunities": {
+          "n": 1,
+          "pct": 0.1,
+          "complete": false
+        },
+        "scenarios": {
+          "n": 1,
+          "pct": 0.1,
+          "complete": false
+        }
+      }
+    },
+    "MASS": {
+      "n_transcripts": 3,
+      "steps": {
+        "empathy-maps": {
+          "n": 3,
+          "pct": 1.0,
+          "complete": true
+        },
+        "journey": {
+          "n": 3,
+          "pct": 1.0,
+          "complete": true
+        },
+        "personas": {
+          "n": 3,
+          "pct": 1.0,
+          "complete": true
+        },
+        "jtbd": {
+          "n": 3,
+          "pct": 1.0,
+          "complete": true
+        },
+        "ai-opportunities": {
+          "n": 1,
+          "pct": 0.33,
+          "complete": false
+        },
+        "scenarios": {
+          "n": 1,
+          "pct": 0.33,
+          "complete": false
+        }
+      }
+    },
+    "MT360": {
+      "n_transcripts": 5,
+      "steps": {
+        "empathy-maps": {
+          "n": 6,
+          "pct": 1.2,
+          "complete": true
+        },
+        "journey": {
+          "n": 6,
+          "pct": 1.2,
+          "complete": true
+        },
+        "personas": {
+          "n": 3,
+          "pct": 0.6,
+          "complete": false
+        },
+        "jtbd": {
+          "n": 3,
+          "pct": 0.6,
+          "complete": false
+        },
+        "ai-opportunities": {
+          "n": 1,
+          "pct": 0.2,
+          "complete": false
+        },
+        "scenarios": {
+          "n": 1,
+          "pct": 0.2,
+          "complete": false
+        }
+      }
+    },
+    "OFFX": {
+      "n_transcripts": 12,
+      "steps": {
+        "empathy-maps": {
+          "n": 12,
+          "pct": 1.0,
+          "complete": true
+        },
+        "journey": {
+          "n": 12,
+          "pct": 1.0,
+          "complete": true
+        },
+        "personas": {
+          "n": 4,
+          "pct": 0.33,
+          "complete": false
+        },
+        "jtbd": {
+          "n": 12,
+          "pct": 1.0,
+          "complete": true
+        },
+        "ai-opportunities": {
+          "n": 1,
+          "pct": 0.08,
+          "complete": false
+        },
+        "scenarios": {
+          "n": 1,
+          "pct": 0.08,
+          "complete": false
+        }
+      }
+    },
+    "PT": {
+      "n_transcripts": 7,
+      "steps": {
+        "empathy-maps": {
+          "n": 7,
+          "pct": 1.0,
+          "complete": true
+        },
+        "journey": {
+          "n": 7,
+          "pct": 1.0,
+          "complete": true
+        },
+        "personas": {
+          "n": 4,
+          "pct": 0.57,
+          "complete": false
+        },
+        "jtbd": {
+          "n": 7,
+          "pct": 1.0,
+          "complete": true
+        },
+        "ai-opportunities": {
+          "n": 1,
+          "pct": 0.14,
+          "complete": false
+        },
+        "scenarios": {
+          "n": 1,
+          "pct": 0.14,
+          "complete": false
+        }
+      }
+    }
+  },
+  "gaps": [
+    {
+      "project": "CDDI",
+      "step": "personas",
+      "have": 6,
+      "need": 17,
+      "missing": 11,
+      "pct": 0.35
+    },
+    {
+      "project": "CDDI",
+      "step": "ai-opportunities",
+      "have": 1,
+      "need": 17,
+      "missing": 16,
+      "pct": 0.06
+    },
+    {
+      "project": "CDDI",
+      "step": "scenarios",
+      "have": 4,
+      "need": 17,
+      "missing": 13,
+      "pct": 0.24
+    },
+    {
+      "project": "CPI",
+      "step": "personas",
+      "have": 5,
+      "need": 10,
+      "missing": 5,
+      "pct": 0.5
+    },
+    {
+      "project": "CPI",
+      "step": "ai-opportunities",
+      "have": 3,
+      "need": 10,
+      "missing": 7,
+      "pct": 0.3
+    },
+    {
+      "project": "CPI",
+      "step": "scenarios",
+      "have": 2,
+      "need": 10,
+      "missing": 8,
+      "pct": 0.2
+    },
+    {
+      "project": "DI&A",
+      "step": "personas",
+      "have": 6,
+      "need": 21,
+      "missing": 15,
+      "pct": 0.29
+    },
+    {
+      "project": "DI&A",
+      "step": "ai-opportunities",
+      "have": 1,
+      "need": 21,
+      "missing": 20,
+      "pct": 0.05
+    },
+    {
+      "project": "DI&A",
+      "step": "scenarios",
+      "have": 1,
+      "need": 21,
+      "missing": 20,
+      "pct": 0.05
+    },
+    {
+      "project": "Fusion",
+      "step": "personas",
+      "have": 4,
+      "need": 21,
+      "missing": 17,
+      "pct": 0.19
+    },
+    {
+      "project": "Fusion",
+      "step": "jtbd",
+      "have": 0,
+      "need": 21,
+      "missing": 21,
+      "pct": 0.0
+    },
+    {
+      "project": "Fusion",
+      "step": "ai-opportunities",
+      "have": 0,
+      "need": 21,
+      "missing": 21,
+      "pct": 0.0
+    },
+    {
+      "project": "Fusion",
+      "step": "scenarios",
+      "have": 1,
+      "need": 21,
+      "missing": 20,
+      "pct": 0.05
+    },
+    {
+      "project": "KAI",
+      "step": "empathy-maps",
+      "have": 5,
+      "need": 10,
+      "missing": 5,
+      "pct": 0.5
+    },
+    {
+      "project": "KAI",
+      "step": "journey",
+      "have": 5,
+      "need": 10,
+      "missing": 5,
+      "pct": 0.5
+    },
+    {
+      "project": "KAI",
+      "step": "personas",
+      "have": 0,
+      "need": 10,
+      "missing": 10,
+      "pct": 0.0
+    },
+    {
+      "project": "KAI",
+      "step": "jtbd",
+      "have": 5,
+      "need": 10,
+      "missing": 5,
+      "pct": 0.5
+    },
+    {
+      "project": "KAI",
+      "step": "ai-opportunities",
+      "have": 1,
+      "need": 10,
+      "missing": 9,
+      "pct": 0.1
+    },
+    {
+      "project": "KAI",
+      "step": "scenarios",
+      "have": 1,
+      "need": 10,
+      "missing": 9,
+      "pct": 0.1
+    },
+    {
+      "project": "MASS",
+      "step": "ai-opportunities",
+      "have": 1,
+      "need": 3,
+      "missing": 2,
+      "pct": 0.33
+    },
+    {
+      "project": "MASS",
+      "step": "scenarios",
+      "have": 1,
+      "need": 3,
+      "missing": 2,
+      "pct": 0.33
+    },
+    {
+      "project": "MT360",
+      "step": "personas",
+      "have": 3,
+      "need": 5,
+      "missing": 2,
+      "pct": 0.6
+    },
+    {
+      "project": "MT360",
+      "step": "jtbd",
+      "have": 3,
+      "need": 5,
+      "missing": 2,
+      "pct": 0.6
+    },
+    {
+      "project": "MT360",
+      "step": "ai-opportunities",
+      "have": 1,
+      "need": 5,
+      "missing": 4,
+      "pct": 0.2
+    },
+    {
+      "project": "MT360",
+      "step": "scenarios",
+      "have": 1,
+      "need": 5,
+      "missing": 4,
+      "pct": 0.2
+    },
+    {
+      "project": "OFFX",
+      "step": "personas",
+      "have": 4,
+      "need": 12,
+      "missing": 8,
+      "pct": 0.33
+    },
+    {
+      "project": "OFFX",
+      "step": "ai-opportunities",
+      "have": 1,
+      "need": 12,
+      "missing": 11,
+      "pct": 0.08
+    },
+    {
+      "project": "OFFX",
+      "step": "scenarios",
+      "have": 1,
+      "need": 12,
+      "missing": 11,
+      "pct": 0.08
+    },
+    {
+      "project": "PT",
+      "step": "personas",
+      "have": 4,
+      "need": 7,
+      "missing": 3,
+      "pct": 0.57
+    },
+    {
+      "project": "PT",
+      "step": "ai-opportunities",
+      "have": 1,
+      "need": 7,
+      "missing": 6,
+      "pct": 0.14
+    },
+    {
+      "project": "PT",
+      "step": "scenarios",
+      "have": 1,
+      "need": 7,
+      "missing": 6,
+      "pct": 0.14
+    }
+  ]
+}

@@ -42,7 +42,12 @@ hypotheses:
   - id: H2
     slug: pipeline-automation
     priority: 3
-    status: not_started
+    status: shipped
+    result: >
+      CONFIRMATORY. Pipeline status audit: 9 projects, 106 transcripts. Empathy+journey: 99-100% complete.
+      Real gaps: Fusion (0 JTBD), 3 projects partial JTBD, all 9 projects severely under-generated scenarios
+      (13 files vs ~45 expected). /research-pipeline SKILL.md created. pipeline_status.py runs in <1 second.
+    shipped_date: "2026-04-27"
     experiment: experiments/H2-pipeline-automation/
 
   - id: H3
@@ -120,8 +125,8 @@ hypotheses:
     shipped_date: "2026-04-27"
     experiment: experiments/H9-empathy-clustering-skill/
 
-current_hypothesis: H2
-current_experiment: experiments/H2-pipeline-automation/
+current_hypothesis: H3
+current_experiment: experiments/H3-dspy-prompt-optimization/
 
 metrics:
   primary: "Validated improvements shipped (skills updated/created)"
@@ -137,3 +142,4 @@ trajectory:
   - {id: H4, outcome: "Blind confidence weighting breaks high-pain signals — needs pain-modulation"}
   - {id: H9, outcome: "empathy-clustering skill ships — <10s runtime, 8 clusters, 4% noise on DI&A — all manual themes recovered"}
   - {id: H8, outcome: "3 platform capability themes emerge from cluster-aware scoring: Data Synthesis, Trust/RAG, NL Automation — 22/24 re-ranked, 4 demoted"}
+  - {id: H2, outcome: "Pipeline audit: empathy+journey 99% done, scenarios universal 80% gap — /research-pipeline skill created, <1s audit runtime"}
