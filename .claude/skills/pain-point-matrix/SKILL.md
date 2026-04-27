@@ -1,6 +1,6 @@
 ---
 name: pain-point-matrix
-description: Create pain point prioritization matrix plotting user frustrations by Severity × Frequency to prioritize which problems to solve first. Use when user wants to prioritize fixes, understand critical pain points, calculate ROI for improvements, or create phased roadmaps. Extracts pain points from empathy maps, journey maps, and task analyses, scores them by impact and occurrence, and generates actionable recommendations with business impact analysis.
+description: Create pain point prioritization matrix plotting user frustrations by Severity × Frequency to prioritize which problems to solve first. Use when user wants to prioritize fixes, understand critical pain points, calculate ROI for improvements, or create phased roadmaps. AUTO-DISCOVERS pain points from existing empathy maps, journey maps, and JTBD files in the project folder — no manual input needed. Just provide the project domain name.
 ---
 
 # Pain Point Prioritization Matrix
@@ -9,13 +9,102 @@ description: Create pain point prioritization matrix plotting user frustrations 
 
 Transform interview data into a **Pain Point Prioritization Matrix** that plots user frustrations by **Severity** (how bad) and **Frequency** (how often). This creates a clear visual framework for prioritizing which problems to solve first.
 
+**You operate in AUTO-DISCOVERY mode by default.** When given a project domain name, you autonomously scan all existing research files and extract, merge, score, and prioritize pain points without requiring any manual input from the user.
+
+## Auto-Discovery Mode (Default)
+
+**Trigger**: `/pain-point-matrix [domain]` — just the domain name is enough.
+
+### Step 0: Scan Available Files
+
+Before anything else, discover what files exist:
+
+```
+List files in: [domain]/empathy-maps/empathy-map-*.md   → FEELS extraction
+List files in: [domain]/journey/*.md                     → Pain Points per phase
+List files in: [domain]/jtbd/*-jtbd-*.md                 → Switching triggers / obstacles
+List files in: [domain]/task-analysis/*.md               → Task-level pain (if available)
+List files in: [domain]/mental-models/*.md               → Support gaps (if available)
+```
+
+Read ALL discovered files. Do not ask the user for a list — find them yourself.
+
+### Step 1: Extract From Empathy Maps (FEELS Quadrant)
+
+In each `empathy-map-*.md`, find the `## FEELS` section. Extract entries that signal pain:
+
+**Pain signal patterns:**
+- Emotions: frustrated, concerned, overwhelmed, anxious, skeptical, constrained, helpless, worried
+- Intensity markers: "High intensity", "🔴", intensity score ≥ 7/10
+- Language: "scares", "struggle", "difficult", "hate", "broken", "painful", "exhausting"
+
+**Extract as:**
+```
+Pain: [emotion/description in 5-10 words]
+Quote: [verbatim quote from the bullet]
+User: [filename without path: abhishek, brian, etc.]
+Severity signal: [High/Medium/Low from intensity marker]
+Source: empathy-map-[user].md
+```
+
+**Skip:** Positive emotions (confident, hopeful, excited) unless paired with a constraint.
+
+### Step 2: Extract From Journey Maps (Pain Points Sections)
+
+In each journey map, find sections matching `**Pain Points:**` or `### Pain Points` within each phase. Extract every bullet:
+
+**Pattern to match:**
+```
+**Pain Points:**
+- **[Bold name]** - [description or "quote"]
+```
+
+**Extract as:**
+```
+Pain: [bold name / first 8 words of description]
+Quote: [any quoted text found]
+Phase: [phase heading this appeared under]
+User: [filename]
+Frequency signal: [daily/weekly/monthly if mentioned in phase context]
+Source: journey/[filename].md (Phase: [phase name])
+```
+
+### Step 3: Extract From JTBD Files (Pain Points + Switching Triggers)
+
+In each JTBD file, find sections matching:
+- `**Pain Points**` blocks under each job
+- `Switching Triggers` sections (switching = very high pain)
+- `⏰ Time:`, `🎯 Quality:`, `💰 Cost:`, `🔒 Risk:` labeled items
+
+**Extract as:**
+```
+Pain: [description]
+Category: [Time/Quality/Cost/Risk]
+Switching: [true if from Switching Triggers — score severity +1]
+Quote: [any supporting quote]
+Frequency: [from job frequency label: daily/weekly/monthly/quarterly]
+User/Persona: [file stem]
+Source: jtbd/[filename].md
+```
+
+### Step 2.5: Deduplication and Merging
+
+After extracting from all sources, merge entries that refer to the same underlying problem:
+
+**Merge rule:** Two entries describe the same pain if they share the same core concept (e.g., "manual data consolidation", "multi-source search"). When merging:
+- Combine all quotes into the merged entry
+- Set `users_affected` = count of distinct users mentioning it
+- Set confidence = `high` (3+ sources), `medium` (2 sources), `low` (1 source)
+- Keep the most specific description
+
 ## Inputs You Will Receive
 
-You will work with:
-- **Empathy maps** in `/[PROJECT]/empathy-maps/empathy-map-*.md` (for "Pains" quadrant)
-- **Journey maps** in `/[PROJECT]/journey/user-journey-*.md` (for pain points per phase)
-- **Task analysis** in `/[PROJECT]/task-analysis/task-analysis-*.md` (for task-specific pain)
-- **Mental model diagrams** in `/[PROJECT]/mental-models/mental-model-*.md` (for support gaps)
+You will work with (all auto-discovered):
+- **Empathy maps** in `[PROJECT]/empathy-maps/empathy-map-*.md` — FEELS quadrant pain signals
+- **Journey maps** in `[PROJECT]/journey/*.md` — Pain Points listed per phase
+- **JTBD files** in `[PROJECT]/jtbd/*.md` — Job obstacles + switching triggers
+- **Task analysis** in `[PROJECT]/task-analysis/*.md` (optional)
+- **Mental model diagrams** in `[PROJECT]/mental-models/*.md` (optional)
 - **Project name** (e.g., CPI, DI&A, CDDI)
 
 ## Output Location
@@ -75,25 +164,43 @@ High Severity
 
 ### Scoring Methodology
 
-**Severity (1-5)**:
-- **5 - Blocker**: Prevents task completion, no workaround
-- **4 - Major**: Significant time loss (>30 min) or high frustration
-- **3 - Moderate**: Noticeable friction, manual workaround exists
-- **2 - Minor**: Small annoyance, doesn't impede workflow
-- **1 - Trivial**: Barely noticeable, cosmetic
+**Severity (1-5)** — auto-inferred from source signals:
 
-**Frequency (1-5)**:
-- **5 - Constantly**: Multiple times per day
-- **4 - Daily**: Once per day or every session
-- **3 - Weekly**: Multiple times per week
-- **2 - Monthly**: Few times per month
-- **1 - Rarely**: Less than monthly, episodic
+| Signal in source file | Severity |
+|---|---|
+| FEELS "High intensity" OR switching trigger OR "can't complete task" | 5 |
+| FEELS "Medium-high intensity" OR "significant time loss" OR "hours" of workaround | 4 |
+| FEELS "Medium intensity" OR "manual workaround exists" OR friction language | 3 |
+| FEELS "Low-medium intensity" OR "minor annoyance" | 2 |
+| FEELS "Low intensity" OR cosmetic complaint | 1 |
+
+Boost severity by +1 if:
+- Pain appears in `Switching Triggers` (user would leave product for this)
+- Quote contains: "can't", "impossible", "no way", "broken", "hate", "painful", "scares"
+- Pain is tagged with `💰 Cost:` or `🔒 Risk:` in JTBD (business stakes)
+
+**Frequency (1-5)** — auto-inferred from source signals:
+
+| Signal in source file | Frequency |
+|---|---|
+| JTBD job frequency = "daily" OR journey phase = core daily workflow | 5 |
+| JTBD = "weekly" OR "every session" OR "each time I do X" | 4 |
+| JTBD = "monthly" OR "few times a week" | 3 |
+| JTBD = "quarterly" OR "occasionally" | 2 |
+| JTBD = "yearly" OR "rarely" OR edge case | 1 |
+
+If no frequency signal found: default to 3 (weekly) and note as estimated.
 
 **Priority Score** = Severity × Frequency (range: 1-25)
 - **20-25**: Critical (must fix)
 - **15-19**: High priority
 - **8-14**: Medium priority
 - **1-7**: Low priority
+
+**Confidence** (based on number of sources confirming the pain):
+- **High**: 3+ distinct users / 3+ source files
+- **Medium**: 2 users / 2 source files
+- **Low**: 1 user / 1 source file — flag as "needs validation"
 
 ## Classification Prompts
 

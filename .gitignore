@@ -66,6 +66,8 @@ build/
 /[A-Z]*/
 /[A-Z][A-Z]*/
 /[A-Z][A-Z0-9]*/
+# Whitelist research workspace (case-insensitive FS on macOS causes false match above)
+!platform-research/
 
 # Docs folder (except specific public docs)
 /docs/

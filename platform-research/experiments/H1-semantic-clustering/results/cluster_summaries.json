@@ -1,0 +1,589 @@
+[
+  {
+    "cluster_id": 0,
+    "size": 162,
+    "n_projects": 7,
+    "universality": 0.7777777777777778,
+    "projects": {
+      "Fusion": 62,
+      "DI&A": 44,
+      "MT360": 17,
+      "PT": 13,
+      "KAI": 10,
+      "OFFX": 10,
+      "CDDI": 6
+    },
+    "top_emotions": [
+      [
+        "curious",
+        21
+      ],
+      [
+        "skeptical",
+        17
+      ],
+      [
+        "pragmatic",
+        14
+      ],
+      [
+        "excited",
+        11
+      ],
+      [
+        "concerned",
+        10
+      ]
+    ],
+    "sample_descriptions": [
+      "in AI-first approach as competitive advantage",
+      "about AI potential to replace himself",
+      "about scalability and skill barriers",
+      "about vendor-provided AI solutions",
+      "about AI potential for literature review acceleration"
+    ]
+  },
+  {
+    "cluster_id": 1,
+    "size": 72,
+    "n_projects": 8,
+    "universality": 0.8888888888888888,
+    "projects": {
+      "OFFX": 46,
+      "CDDI": 16,
+      "Fusion": 4,
+      "KAI": 2,
+      "DI&A": 1,
+      "CPI": 1,
+      "PT": 1,
+      "MT360": 1
+    },
+    "top_emotions": [
+      [
+        "confident",
+        6
+      ],
+      [
+        "intellectually",
+        4
+      ],
+      [
+        "excited",
+        3
+      ],
+      [
+        "energized",
+        3
+      ],
+      [
+        "uncertain",
+        3
+      ]
+    ],
+    "sample_descriptions": [
+      "about Northern Light's GenAI layer \u2014 it's working and users love it",
+      "when discovering the perfect candidate molecule that fits all technical and commercial criteria",
+      "for maintaining product safety vigilance",
+      "on clinical/patient safety domain",
+      "about ML hype in drug discovery"
+    ]
+  },
+  {
+    "cluster_id": 2,
+    "size": 57,
+    "n_projects": 8,
+    "universality": 0.8888888888888888,
+    "projects": {
+      "CDDI": 24,
+      "DI&A": 9,
+      "MT360": 7,
+      "PT": 6,
+      "Fusion": 4,
+      "KAI": 4,
+      "OFFX": 2,
+      "CPI": 1
+    },
+    "top_emotions": [
+      [
+        "confident",
+        33
+      ],
+      [
+        "satisfied",
+        5
+      ],
+      [
+        "uncertain",
+        4
+      ],
+      [
+        "proud",
+        2
+      ],
+      [
+        "methodical",
+        1
+      ]
+    ],
+    "sample_descriptions": [
+      "in the triangulation methodology as a defensible approach when applied rigorously",
+      "when self-service works \u2014 that's the goal she's building toward",
+      "\u2014 she knows exactly which data she needs and when, and describes her workflow in precise, structured terms",
+      "in strategic coordination role despite lack of direct authority",
+      "in own expertise but aware it doesn't scale"
+    ]
+  },
+  {
+    "cluster_id": 3,
+    "size": 22,
+    "n_projects": 5,
+    "universality": 0.5555555555555556,
+    "projects": {
+      "DI&A": 9,
+      "PT": 6,
+      "Fusion": 5,
+      "CDDI": 1,
+      "MT360": 1
+    },
+    "top_emotions": [
+      [
+        "collaborative",
+        7
+      ],
+      [
+        "grateful",
+        3
+      ],
+      [
+        "satisfied",
+        2
+      ],
+      [
+        "appreciative",
+        2
+      ],
+      [
+        "disappointed",
+        1
+      ]
+    ],
+    "sample_descriptions": [
+      "by Clarivate feature deprecation",
+      "for cross-functional team collaboration",
+      "and team-oriented in decision-making",
+      "with cross-functional trifecta (strategy, execution, medical)",
+      "with the partnership model when Clarivate is responsive and customizable"
+    ]
+  },
+  {
+    "cluster_id": 4,
+    "size": 17,
+    "n_projects": 2,
+    "universality": 0.2222222222222222,
+    "projects": {
+      "CPI": 16,
+      "OFFX": 1
+    },
+    "top_emotions": [
+      [
+        "confident",
+        4
+      ],
+      [
+        "satisfied",
+        2
+      ],
+      [
+        "pressured",
+        2
+      ],
+      [
+        "accomplished",
+        2
+      ],
+      [
+        "relieved",
+        1
+      ]
+    ],
+    "sample_descriptions": [
+      "when completing a thorough FTO analysis with clear recommendations",
+      "when FTO analysis enables client to proceed confidently with development",
+      "by company expansion plans requiring IP analysis in new markets",
+      "when making decisions backed by comprehensive market and IP intelligence",
+      "when regulatory data conflicts across sources and requires extensive validation"
+    ]
+  },
+  {
+    "cluster_id": 5,
+    "size": 31,
+    "n_projects": 2,
+    "universality": 0.2222222222222222,
+    "projects": {
+      "CPI": 29,
+      "CDDI": 2
+    },
+    "top_emotions": [
+      [
+        "anxious",
+        4
+      ],
+      [
+        "analytical",
+        4
+      ],
+      [
+        "frustrated",
+        4
+      ],
+      [
+        "uncertain",
+        3
+      ],
+      [
+        "concerned",
+        2
+      ]
+    ],
+    "sample_descriptions": [
+      "about missing critical patents that could derail client projects",
+      "when methodically working through complex patent landscapes",
+      "by the time-consuming nature of manual patent review and validation",
+      "when dealing with molecules that have 50+ patent families to analyze",
+      "by client expectations for fast turnaround on complex patent questions"
+    ]
+  },
+  {
+    "cluster_id": 6,
+    "size": 23,
+    "n_projects": 7,
+    "universality": 0.7777777777777778,
+    "projects": {
+      "Fusion": 6,
+      "MT360": 5,
+      "DI&A": 4,
+      "CPI": 4,
+      "PT": 2,
+      "CDDI": 1,
+      "KAI": 1
+    },
+    "top_emotions": [
+      [
+        "pragmatic",
+        6
+      ],
+      [
+        "frustrated",
+        3
+      ],
+      [
+        "hopeful",
+        2
+      ],
+      [
+        "strategic",
+        2
+      ],
+      [
+        "curious",
+        2
+      ]
+    ],
+    "sample_descriptions": [
+      "by matrix negotiation burden (franchise value vs. sales force control)",
+      "for vendor innovation and willing to help test",
+      "by vendor pricing models",
+      "about build vs. buy economics \u2014 comfort is evident that they made the right call",
+      "to find the most reliable suppliers despite tool limitations - \"I'll do whatever it takes to get this right\""
+    ]
+  },
+  {
+    "cluster_id": 7,
+    "size": 37,
+    "n_projects": 7,
+    "universality": 0.7777777777777778,
+    "projects": {
+      "CPI": 11,
+      "CDDI": 9,
+      "Fusion": 6,
+      "DI&A": 5,
+      "PT": 3,
+      "KAI": 2,
+      "OFFX": 1
+    },
+    "top_emotions": [
+      [
+        "strategic",
+        5
+      ],
+      [
+        "anxious",
+        4
+      ],
+      [
+        "uncertain",
+        4
+      ],
+      [
+        "pressured",
+        3
+      ],
+      [
+        "\ufe0f",
+        3
+      ]
+    ],
+    "sample_descriptions": [
+      "as the sole CI function at a growing company",
+      "about workforce disruption \u2014 roles and job descriptions disappearing",
+      "about attrition eroding institutional knowledge",
+      "about board credibility",
+      "that financial analysis (IRR, NPV, pro forma) remains unautomated"
+    ]
+  },
+  {
+    "cluster_id": 8,
+    "size": 20,
+    "n_projects": 7,
+    "universality": 0.7777777777777778,
+    "projects": {
+      "CPI": 4,
+      "CDDI": 4,
+      "OFFX": 4,
+      "DI&A": 3,
+      "PT": 2,
+      "KAI": 2,
+      "Fusion": 1
+    },
+    "top_emotions": [
+      [
+        "pressured",
+        12
+      ],
+      [
+        "\u23f0",
+        2
+      ],
+      [
+        "time-pressured",
+        2
+      ],
+      [
+        "mildly",
+        2
+      ],
+      [
+        "\ufe0f",
+        1
+      ]
+    ],
+    "sample_descriptions": [
+      "by scale-up expectations (800M \u2192 2B requires larger products)",
+      "by \"deliver everything yesterday\" culture",
+      "by the always-urgent, last-minute nature of her engagements",
+      "by client deadlines that don't account for the complexity of regulatory research",
+      "by R&D and commercial teams demanding fast clearance decisions"
+    ]
+  },
+  {
+    "cluster_id": 9,
+    "size": 17,
+    "n_projects": 7,
+    "universality": 0.7777777777777778,
+    "projects": {
+      "Fusion": 5,
+      "CDDI": 4,
+      "PT": 3,
+      "DI&A": 2,
+      "CPI": 1,
+      "KAI": 1,
+      "OFFX": 1
+    },
+    "top_emotions": [
+      [
+        "frustrated",
+        8
+      ],
+      [
+        "impatient",
+        2
+      ],
+      [
+        "satisfied",
+        2
+      ],
+      [
+        "challenged",
+        1
+      ],
+      [
+        "concerned",
+        1
+      ]
+    ],
+    "sample_descriptions": [
+      "by DRG navigation lag and information overload",
+      "by time-to-insight gap for KOL calls",
+      "with lengthy analysis cycles when speed-to-decision is critical",
+      "by resource constraints forcing CRO dependence",
+      "with current navigation patterns and workflow efficiency"
+    ]
+  },
+  {
+    "cluster_id": 10,
+    "size": 15,
+    "n_projects": 4,
+    "universality": 0.4444444444444444,
+    "projects": {
+      "DI&A": 8,
+      "CDDI": 3,
+      "Fusion": 3,
+      "OFFX": 1
+    },
+    "top_emotions": [
+      [
+        "overwhelmed",
+        15
+      ]
+    ],
+    "sample_descriptions": [
+      "by systematic review volume and timeline",
+      "by information volume and the difficulty of keeping it organized",
+      "when phase 3 assets require 10 scenarios per month",
+      "by manual harmonization workload",
+      "by the volume and breadth of inbound requests"
+    ]
+  },
+  {
+    "cluster_id": 11,
+    "size": 15,
+    "n_projects": 6,
+    "universality": 0.6666666666666666,
+    "projects": {
+      "Fusion": 6,
+      "DI&A": 4,
+      "CPI": 2,
+      "CDDI": 1,
+      "PT": 1,
+      "MT360": 1
+    },
+    "top_emotions": [
+      [
+        "concerned",
+        4
+      ],
+      [
+        "relieved",
+        2
+      ],
+      [
+        "exasperated",
+        2
+      ],
+      [
+        "frustrated",
+        2
+      ],
+      [
+        "overwhelmed",
+        2
+      ]
+    ],
+    "sample_descriptions": [
+      "when verification confirms alignment",
+      "that contract update process relies on email back-and-forth",
+      "that HR is not connected to pipeline planning despite being the function responsible for resourcing it",
+      "by team members skipping validation despite having data access",
+      "when reviewing data-driven recommendations from functional teams"
+    ]
+  },
+  {
+    "cluster_id": 12,
+    "size": 26,
+    "n_projects": 7,
+    "universality": 0.7777777777777778,
+    "projects": {
+      "DI&A": 10,
+      "CDDI": 7,
+      "CPI": 3,
+      "Fusion": 3,
+      "PT": 1,
+      "KAI": 1,
+      "OFFX": 1
+    },
+    "top_emotions": [
+      [
+        "frustrated",
+        13
+      ],
+      [
+        "relieved",
+        3
+      ],
+      [
+        "overwhelmed",
+        2
+      ],
+      [
+        "wishful",
+        1
+      ],
+      [
+        "unsure",
+        1
+      ]
+    ],
+    "sample_descriptions": [
+      "by data fragmentation and triangulation burden",
+      "when data retrieval takes too long",
+      "by having to manually piece together data from multiple databases for every evaluation",
+      "about a one-click NDA trigger alert integrated into her database workflow",
+      "by Fingertip's inconsistent views of the same data"
+    ]
+  },
+  {
+    "cluster_id": 13,
+    "size": 69,
+    "n_projects": 8,
+    "universality": 0.8888888888888888,
+    "projects": {
+      "DI&A": 22,
+      "Fusion": 19,
+      "CDDI": 8,
+      "MT360": 7,
+      "CPI": 5,
+      "PT": 4,
+      "KAI": 3,
+      "OFFX": 1
+    },
+    "top_emotions": [
+      [
+        "frustrated",
+        26
+      ],
+      [
+        "uncertain",
+        7
+      ],
+      [
+        "exasperated",
+        5
+      ],
+      [
+        "anxious",
+        4
+      ],
+      [
+        "pragmatic",
+        3
+      ]
+    ],
+    "sample_descriptions": [
+      "\u2014 he clearly finds the analytical challenge interesting, particularly the disease ratio extrapolation methodology",
+      "by the manual correction burden across 60-80 markets",
+      "about XUS data validation \u2014 real world evidence doesn't exist for most markets outside the US",
+      "\u2014 builds internal models and methodologies when data gaps can't be solved externally",
+      "by data availability gaps (pediatric, rare diseases)"
+    ]
+  }
+]
