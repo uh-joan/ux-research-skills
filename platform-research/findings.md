@@ -2,7 +2,7 @@
 
 **Research Question:** How can the researcher_ux UX research skills platform be improved in algorithms, workflow automation, quality, and capability gaps?
 
-**Status:** 11 hypotheses shipped (H1-H11). Active — new hypotheses forming from outer loop.
+**Status:** 12 hypotheses shipped (H1-H12). **RESEARCH COMPLETE.**
 
 **Last Updated:** 2026-04-27
 
@@ -142,15 +142,19 @@ DI&A (most complete) and CPI (richest data) are the reference implementations. 7
 
 ---
 
-## Open Questions
+## Open Questions (Resolved)
 
-1. **Pipeline orchestration granularity** — Per-transcript vs. per-project for /research-pipeline. Per-transcript preserves traceability; per-project is simpler. Decision left to implementation phase.
+1. **Pipeline orchestration granularity** — Per-transcript vs. per-project for /research-pipeline. Per-transcript preserves traceability; per-project is simpler. Decision left to implementation phase. Not a research question.
 
-2. **Timing validation** — Is the 85-95% time savings claim still accurate? No explicit timing data tracked per project. Would require a controlled comparison study.
+2. **Timing validation** — Is the 85-95% time savings claim still accurate? No explicit timing data tracked per project. Would require a controlled comparison study outside scope of this research program.
 
-3. **Scenario depth gap** — H10 corrects H2: all 9 projects have ≥1 scenario file (presence = 100%). The gap is depth: most have 1 consolidated map where 3-5 would give richer coverage. This is an execution priority, not a missing-skill problem.
+3. **Scenario depth gap — CLOSED (H12)** — H12 confirms no depth gap exists. Projects have 5-31 numbered scenarios within their consolidated files. H10's "depth gap" framing was a file-count artifact.
 
-4. **Pipeline completeness was mismeasured** (H10) — H2's "9% AI opps, 12% scenarios" used per-transcript denominators for project-level outputs. Corrected: AI opportunities 89% complete (8/9 projects), scenarios 100% presence. Only Fusion is missing AI opportunities (no JTBD to feed it).
+4. **Pipeline completeness was mismeasured — CLOSED (H10, H12)** — Corrected: AI opportunities 89% complete (8/9 projects), scenarios 100% presence AND depth. Only genuine gap: Fusion AI opportunities (execution task, ~30 min).
+
+## One Remaining Execution Task
+
+**Fusion AI opportunities:** Generate 1 AI opportunity assessment from Fusion's cross-persona JTBD synthesis (`Fusion/jtbd/jtbd-cross-persona-synthesis.md`). This is 30 minutes of execution, not a research question. The skill is ready; the JTBD input exists.
 
 ---
 
@@ -170,3 +174,4 @@ DI&A (most complete) and CPI (richest data) are the reference implementations. 7
 | H6 | Figma hardening | ✅ Shipped | Code audit — all 5 failure modes covered; 3 documentation gaps closed in SKILL.md |
 | H10 | Downstream quality audit | ✅ Shipped | File count wrong metric; source proximity right metric. Pipeline was mismeasured — AI opps 89% complete, scenarios 100% presence |
 | H11 | Traceability audit | ✅ Shipped | 148 files, 2% low-density. Quote starvation cascade: PT JTBD→AI opps drops 3.66→0.03. Quality gate added to ai-opportunity-analyzer + scenario-mapper |
+| H12 | Scenario depth | ✅ Shipped | DISCONFIRMATORY — no depth gap. Projects have 5-31 scenarios within files. H10 "depth gap" was file-count artifact. Research complete. |
