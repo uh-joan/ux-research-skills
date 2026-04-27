@@ -2,7 +2,7 @@
 
 **Research Question:** How can the researcher_ux UX research skills platform be improved in algorithms, workflow automation, quality, and capability gaps?
 
-**Status:** 6 hypotheses shipped (H1, H4, H5, H7, H8, H9). Outer loop synthesis complete. H2 is next.
+**Status:** 7 hypotheses shipped (H1, H2, H4, H5, H7, H8, H9). Outer loop complete. Moving to paper writing.
 
 **Last Updated:** 2026-04-27
 
@@ -23,16 +23,21 @@ The core pipeline (empathy map → user journey → persona → JTBD → AI oppo
 
 **Critical gaps (impact: HIGH):**
 
-1. **Scenario mapping output gap** — 80-90% of expected outputs not generated (unchanged)
-2. **Pain-point matrix** — now fixable via auto-discovery mode (H7 shipped)
-3. **Cross-interview analysis** — now addressable via semantic clustering (H1 shipped) + synthesizer (H5 shipped)
-4. **Figma visual deliverables** — 35+ journey maps lack visual counterparts (H6 not started)
+1. **Scenario mapping output gap** — 80-90% confirmed by H2 audit (13 files / ~45 expected). /research-pipeline skill addresses this.
+2. **Pain-point matrix** — fixed via auto-discovery mode (H7 shipped)
+3. **Cross-interview analysis** — addressed by semantic clustering (H1) + synthesizer (H5) + clustering skill (H9)
+4. **Figma visual deliverables** — 35+ journey maps lack visual counterparts (H6 not started — engineering work, not research)
 
-**Important opportunities (impact: MEDIUM):**
+**Resolved opportunities:**
 
-5. **Confidence propagation** — needs pain-modulated weighting, not blind frequency weighting (H4 result)
-6. **Pipeline automation** — CrewAI/LangGraph for empathy → persona → JTBD (H2 not started)
-7. **Prompt optimization** — DSPy with 400+ outputs as training signal (H3 not started)
+5. **Confidence propagation** — pain-modulated weighting now algorithmic (H4 result)
+6. **Pipeline automation** — /research-pipeline SKILL.md detects gaps and runs missing steps in sequence (H2 shipped)
+7. **Cross-domain AI roadmap** — 3 platform capabilities identified from cluster-aware scoring (H8 shipped)
+
+**Remaining (out of current scope):**
+
+8. **Prompt optimization** — DSPy with 400+ outputs as training signal (H3 not started — engineering investment)
+9. **Figma hardening** — Node ID staleness fix (H6 not started — isolated engineering work)
 
 ---
 
