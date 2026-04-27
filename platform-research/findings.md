@@ -2,7 +2,7 @@
 
 **Research Question:** How can the researcher_ux UX research skills platform be improved in algorithms, workflow automation, quality, and capability gaps?
 
-**Status:** 4 hypotheses shipped. Outer loop synthesis complete. 2 new hypotheses generated (H8, H9).
+**Status:** 6 hypotheses shipped (H1, H4, H5, H7, H8, H9). Outer loop synthesis complete. H2 is next.
 
 **Last Updated:** 2026-04-27
 
