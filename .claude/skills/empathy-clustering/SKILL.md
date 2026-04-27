@@ -94,15 +94,18 @@ import re
 def extract_feels_entries(path):
     content = Path(path).read_text(encoding='utf-8', errors='ignore')
     
-    # Find FEELS section
-    feels_match = re.search(
-        r'##\s*(?:💭\s*)?(?:\d+\.)?\s*FEELS[^\n]*\n(.*?)(?=\n##|\Z)',
-        content, re.DOTALL | re.IGNORECASE
+    # Find FEELS section — position-based extraction avoids regex \Z collapse bug
+    # (non-greedy (.*?)(?=\n##|\Z) collapses to 0 chars when FEELS has ### subsections)
+    feels_hdr = re.search(
+        r'##\s*(?:💭\s*)?(?:\d+\.)?\s*FEELS[^\n]*\n',
+        content, re.IGNORECASE
     )
-    if not feels_match:
+    if not feels_hdr:
         return []
     
-    feels_text = feels_match.group(1)
+    start = feels_hdr.end()
+    next_sec = re.search(r'\n## ', content[start:])
+    feels_text = content[start : start + (next_sec.start() if next_sec else len(content[start:]))]
     entries = []
     SKIP = re.compile(
         r'^(?:dominant emotion|emotional trajectory|evidence:|impact:|emotion:|'

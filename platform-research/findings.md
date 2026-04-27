@@ -139,6 +139,7 @@ DI&A (most complete) and CPI (richest data) are the reference implementations. 7
 | H9 | Empathy-clustering skill | ✅ Shipped | 8 clusters, 4% noise, <10s — all DI&A themes recovered |
 | H8 | Cluster-aware scoring | ✅ Shipped | 3 platform capability themes — per-product P1s systematically undervalue universal investments |
 | H2 | Pipeline automation | ✅ Shipped | /research-pipeline skill + audit — scenario gap confirmed (13/~45 files), Fusion JTBD=0 |
+| H3 | Prompt optimization | ✅ Shipped | FEELS quality CV=69% — prompt-driven not data-driven; 3 improvements + bug fix shipped |
 | H2 | Pipeline automation | ⏳ Pending | CrewAI/LangGraph orchestration |
 | H3 | DSPy optimization | ⏳ Pending | Prompt optimization from 400+ examples |
 | H6 | Figma hardening | ⏳ Pending | node ID staleness fix |

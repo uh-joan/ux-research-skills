@@ -143,15 +143,19 @@ Detect:
   - Tone shifts (enthusiasm → caution)
 - Contextual triggers (what causes each emotion)
 
+Generate **8-15 distinct FEELS entries** — do not stop at dominant emotions, capture the full emotional range from the transcript. More entries = richer clustering analysis downstream.
+
 For each emotion:
 1. Identify the feeling (use adjective)
-2. Note intensity (high/medium/low)
-3. Explain context (why they feel this way)
-4. Map to emoji (😰 😤 🤩 😕 😌 💡 🤓)
+2. Map to emoji (😰 😤 🤩 😕 😌 💡 🤓)
+3. Write a **10-20 word description** of the specific situation triggering this emotion — name the exact context, not just the category
 
 Format:
-- **😰 [Emotion]** by [context/trigger]
-  - *"Supporting quote"*
+- **😰 [Emotion]** [10-20 word description of specific situational trigger]
+  - *"Supporting quote from transcript"* (include for at least 30% of entries)
+
+Good description: "Frustrated by having to manually reconcile sales data from 5 databases for every new market evaluation"
+Bad description: "Frustrated by data issues" (too vague — what data, what context?)
 
 Then identify:
 - **Dominant Emotion:** [The most prevalent emotional state]
@@ -345,10 +349,11 @@ Go through the transcript systematically:
    - Note tools, time allocation, frequency
    - Document current state (not aspirational)
 
-4. **FEELS**: Detect 4-8 emotional states
+4. **FEELS**: Detect **8-15 emotional states** (never fewer than 8 for a full interview)
    - Find emotion words and intensity markers
-   - Map emotions to context/triggers
-   - Assign emoji representations
+   - Write 10-20 word situational descriptions per entry (not single-phrase)
+   - Include supporting quotes for ≥30% of entries
+   - Map emotions to context/triggers with specificity
 
 ### Step 4: Cluster Themes
 
