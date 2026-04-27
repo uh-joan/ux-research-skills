@@ -60,6 +60,22 @@ The 11 universal clusters:
 
 **Platform implication:** These 11 clusters ARE the Clarivate user emotional taxonomy. Any AI feature addressing Clusters 9+12+13 (data fragmentation/correction) or Cluster 0 (AI ambivalence) addresses universal platform pain.
 
+### Pattern 4 (NEW — H8 RESULT): Per-Product AI Roadmaps Systematically Undervalue Platform Investments
+
+**H8 applied H1 cluster taxonomy as cross-domain weights to 24 AI opportunities** across 8 products. Result: 22 of 24 re-ranked; 4 demoted to P3. The ceiling effect (20 opportunities all score 10.0) is the finding: when you account for cross-domain universality, almost every P1 touching a universal cluster (6+ products) deserves P0 consideration.
+
+**The 3 platform capability themes that emerge:**
+
+1. **Data Synthesis & Reconciliation** (8/9 products, Clusters 12+13) — Cross-source entity resolution, fuzzy matching, variance detection. Every product independently building this. Should be platform infrastructure with per-product adapters. MVP: PT's Fuzzy-Match Entity Resolver as shared service.
+
+2. **Trust / Retrieval-First AI Infrastructure** (7-8/9 products, Clusters 0+2+7) — Source citation, methodology provenance, hallucination prevention. Per-product RAG builds are duplicated effort. Should be a shared RAG framework that all AI features run on top of. MVP: PT's Retrieval-First AI Architecture as platform-wide standard.
+
+3. **NL Workflow Automation** (7/9 products, Clusters 5+6+13) — Natural language query → synthesized report. Reduces 60-90 min workflows to 5-10 min universally. MVP: MASS's NL Query Interface generalized as platform capability.
+
+**The 4 demoted items** (Multi-Parameter Candidate Screening, Literature Summarization, Chemistry-Biology AI, Evidence Change Alerting) are product-specific investments that should NOT receive shared platform resources.
+
+**Strategic implication:** The AI roadmap should be organized by H1 cluster, not by product. Products that share the same universal pain cluster should co-invest in a shared capability rather than each building their own.
+
 ### Pattern 3: Pain Intensity × Source Confidence is the Right Scoring Dimension [NEW — H4 RESULT]
 
 H4 revealed that blind frequency-based confidence weighting breaks high-stakes, low-frequency signals:
@@ -116,7 +132,7 @@ DI&A (most complete) and CPI (richest data) are the reference implementations. 7
 | H1 | Semantic clustering | ✅ Shipped | 11 universal clusters, 14 total, 12% noise |
 | H4 | Confidence propagation | ✅ Shipped | Pain-modulated confidence is correct design |
 | H9 | Empathy-clustering skill | ✅ Shipped | 8 clusters, 4% noise, <10s — all DI&A themes recovered |
-| H8 | Cluster-aware scoring | 🔄 Next | Apply H1 clusters to AI opportunity weights |
+| H8 | Cluster-aware scoring | ✅ Shipped | 3 platform capability themes — per-product P1s systematically undervalue universal investments |
 | H2 | Pipeline automation | ⏳ Pending | CrewAI/LangGraph orchestration |
 | H3 | DSPy optimization | ⏳ Pending | Prompt optimization from 400+ examples |
 | H6 | Figma hardening | ⏳ Pending | node ID staleness fix |

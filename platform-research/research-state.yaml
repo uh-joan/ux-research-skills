@@ -94,10 +94,14 @@ hypotheses:
       Rerunning cross-project AI opportunity scoring with cluster-aware weights surfaces
       3-5 platform-level AI investments distinct from current per-product P1 lists.
     priority: 3
-    status: not_started
-    confidence_prior: high
-    feasibility: high
-    expected_impact: high
+    status: shipped
+    result: >
+      CONFIRMATORY with insight. 22 of 24 opportunities re-ranked. 20 reach P0 (ceiling effect reveals
+      systematic undervaluation in per-product tiers). 4 demoted to P3 — these are product-specific.
+      Key finding: 3 platform capability themes emerge (Data Synthesis, Trust/RAG Infrastructure,
+      NL Workflow Automation) — not 3-5 individual investments. Per-product P1 tier systematically
+      undervalues universal-cluster investments. Recommendation: reorganize roadmap by cluster, not product.
+    shipped_date: "2026-04-27"
     experiment: experiments/H8-cluster-aware-scoring/
 
   - id: H9
@@ -116,8 +120,8 @@ hypotheses:
     shipped_date: "2026-04-27"
     experiment: experiments/H9-empathy-clustering-skill/
 
-current_hypothesis: H8
-current_experiment: experiments/H8-cluster-aware-scoring/
+current_hypothesis: H2
+current_experiment: experiments/H2-pipeline-automation/
 
 metrics:
   primary: "Validated improvements shipped (skills updated/created)"
@@ -132,3 +136,4 @@ trajectory:
   - {id: H1, outcome: "11 universal FEELS clusters across 9 products — CONFIRMED beyond prediction"}
   - {id: H4, outcome: "Blind confidence weighting breaks high-pain signals — needs pain-modulation"}
   - {id: H9, outcome: "empathy-clustering skill ships — <10s runtime, 8 clusters, 4% noise on DI&A — all manual themes recovered"}
+  - {id: H8, outcome: "3 platform capability themes emerge from cluster-aware scoring: Data Synthesis, Trust/RAG, NL Automation — 22/24 re-ranked, 4 demoted"}

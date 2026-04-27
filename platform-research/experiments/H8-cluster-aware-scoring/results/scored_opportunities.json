@@ -1,0 +1,500 @@
+[
+  {
+    "name": "Multi-Source Data Verification & Reconciliation",
+    "project": "CPI",
+    "base_score": 8.3,
+    "pain_score": 8.5,
+    "clusters": [
+      12,
+      7,
+      0
+    ],
+    "tier_original": "P0",
+    "best_multiplier": 1.389,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "UNCHANGED",
+    "cluster_names": [
+      "Data Fragmentation Fatigue",
+      "Process Verification Anxiety",
+      "AI Opportunity-Threat Ambivalence"
+    ]
+  },
+  {
+    "name": "MENA/Brazil Regional Patent Coverage",
+    "project": "CPI",
+    "base_score": 8.8,
+    "pain_score": 9.0,
+    "clusters": [
+      13,
+      4
+    ],
+    "tier_original": "P0",
+    "best_multiplier": 1.444,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "UNCHANGED",
+    "cluster_names": [
+      "Manual Correction Burden at Scale",
+      "Strategic Isolation & Disruption Anxiety"
+    ]
+  },
+  {
+    "name": "Patent Litigation Timeline Predictor",
+    "project": "CPI",
+    "base_score": 8.7,
+    "pain_score": 8.5,
+    "clusters": [
+      7,
+      5,
+      12
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.389,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "Process Verification Anxiety",
+      "Constant Urgency Pressure",
+      "Data Fragmentation Fatigue"
+    ]
+  },
+  {
+    "name": "Pre-Indexed AI Competitive Synthesis",
+    "project": "CDDI",
+    "base_score": 9.0,
+    "pain_score": 8.5,
+    "clusters": [
+      5,
+      6,
+      12
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.389,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "Constant Urgency Pressure",
+      "Tool Navigation Friction",
+      "Data Fragmentation Fatigue"
+    ]
+  },
+  {
+    "name": "AI-Driven Market Forecast Auto-Updater",
+    "project": "DI&A",
+    "base_score": 8.9,
+    "pain_score": 8.5,
+    "clusters": [
+      13,
+      12
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.444,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "Manual Correction Burden at Scale",
+      "Data Fragmentation Fatigue"
+    ]
+  },
+  {
+    "name": "Source-Cited AI Analyst Assistant",
+    "project": "DI&A",
+    "base_score": 8.5,
+    "pain_score": 8.0,
+    "clusters": [
+      0,
+      7,
+      2
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.444,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "AI Opportunity-Threat Ambivalence",
+      "Process Verification Anxiety",
+      "Methodological Confidence in Triangulation"
+    ]
+  },
+  {
+    "name": "AI Taxonomy Mapper + Attribute Enrichment",
+    "project": "MT360",
+    "base_score": 9.1,
+    "pain_score": 9.0,
+    "clusters": [
+      13,
+      6
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.444,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "Manual Correction Burden at Scale",
+      "Tool Navigation Friction"
+    ]
+  },
+  {
+    "name": "Source-Cited AI Assistant for Fire Drills",
+    "project": "MT360",
+    "base_score": 8.9,
+    "pain_score": 8.5,
+    "clusters": [
+      7,
+      0,
+      5
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.389,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "Process Verification Anxiety",
+      "AI Opportunity-Threat Ambivalence",
+      "Constant Urgency Pressure"
+    ]
+  },
+  {
+    "name": "Auto-Triangulation Engine with Variance",
+    "project": "MT360",
+    "base_score": 8.7,
+    "pain_score": 8.5,
+    "clusters": [
+      12,
+      2,
+      7
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.444,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "Data Fragmentation Fatigue",
+      "Methodological Confidence in Triangulation",
+      "Process Verification Anxiety"
+    ]
+  },
+  {
+    "name": "Fuzzy-Match Entity Resolver",
+    "project": "PT",
+    "base_score": 9.0,
+    "pain_score": 9.0,
+    "clusters": [
+      13,
+      12
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.444,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "Manual Correction Burden at Scale",
+      "Data Fragmentation Fatigue"
+    ]
+  },
+  {
+    "name": "Retrieval-First AI Architecture",
+    "project": "PT",
+    "base_score": 9.0,
+    "pain_score": 8.0,
+    "clusters": [
+      0,
+      7
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.389,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "AI Opportunity-Threat Ambivalence",
+      "Process Verification Anxiety"
+    ]
+  },
+  {
+    "name": "Multi-Source Forecast Discrepancy Resolver",
+    "project": "PT",
+    "base_score": 8.5,
+    "pain_score": 8.0,
+    "clusters": [
+      12,
+      13
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.444,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "Data Fragmentation Fatigue",
+      "Manual Correction Burden at Scale"
+    ]
+  },
+  {
+    "name": "Methodology Provenance at Response Level",
+    "project": "KAI",
+    "base_score": 8.8,
+    "pain_score": 8.5,
+    "clusters": [
+      2,
+      7,
+      0
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.444,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "Methodological Confidence in Triangulation",
+      "Process Verification Anxiety",
+      "AI Opportunity-Threat Ambivalence"
+    ]
+  },
+  {
+    "name": "Data-First Response Structure (Anti-Hallucination)",
+    "project": "KAI",
+    "base_score": 8.7,
+    "pain_score": 8.5,
+    "clusters": [
+      0,
+      7
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.389,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "AI Opportunity-Threat Ambivalence",
+      "Process Verification Anxiety"
+    ]
+  },
+  {
+    "name": "Comparative Trial Table Auto-Assembly",
+    "project": "KAI",
+    "base_score": 8.3,
+    "pain_score": 8.0,
+    "clusters": [
+      13,
+      6
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.444,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "Manual Correction Burden at Scale",
+      "Tool Navigation Friction"
+    ]
+  },
+  {
+    "name": "Natural Language Query Interface",
+    "project": "MASS",
+    "base_score": 9.1,
+    "pain_score": 8.5,
+    "clusters": [
+      6,
+      13,
+      5
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.444,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "Tool Navigation Friction",
+      "Manual Correction Burden at Scale",
+      "Constant Urgency Pressure"
+    ]
+  },
+  {
+    "name": "AI-Powered Slide Deck Generator",
+    "project": "MASS",
+    "base_score": 8.9,
+    "pain_score": 8.0,
+    "clusters": [
+      13,
+      5
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.444,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "Manual Correction Burden at Scale",
+      "Constant Urgency Pressure"
+    ]
+  },
+  {
+    "name": "Formulary Name Fuzzy Matcher",
+    "project": "MASS",
+    "base_score": 8.7,
+    "pain_score": 8.5,
+    "clusters": [
+      13,
+      7
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.444,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "Manual Correction Burden at Scale",
+      "Process Verification Anxiety"
+    ]
+  },
+  {
+    "name": "Evidence Synthesis AI",
+    "project": "OFFX",
+    "base_score": 8.6,
+    "pain_score": 8.5,
+    "clusters": [
+      12,
+      7,
+      2
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.444,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "Data Fragmentation Fatigue",
+      "Process Verification Anxiety",
+      "Methodological Confidence in Triangulation"
+    ]
+  },
+  {
+    "name": "Smart Report Generation",
+    "project": "OFFX",
+    "base_score": 8.5,
+    "pain_score": 8.0,
+    "clusters": [
+      13,
+      5
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.444,
+    "conf_floor": 0.9,
+    "cluster_score": 10.0,
+    "tier_new": "P0",
+    "tier_change": "PROMOTED",
+    "cluster_names": [
+      "Manual Correction Burden at Scale",
+      "Constant Urgency Pressure"
+    ]
+  },
+  {
+    "name": "Multi-Parameter Candidate Screening",
+    "project": "CPI",
+    "base_score": 8.3,
+    "pain_score": 7.5,
+    "clusters": [
+      12,
+      6
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.389,
+    "conf_floor": 0.6,
+    "cluster_score": 6.92,
+    "tier_new": "P3",
+    "tier_change": "DEMOTED",
+    "cluster_names": [
+      "Data Fragmentation Fatigue",
+      "Tool Navigation Friction"
+    ]
+  },
+  {
+    "name": "AI-Powered Literature Summarization",
+    "project": "CDDI",
+    "base_score": 8.2,
+    "pain_score": 7.5,
+    "clusters": [
+      12,
+      6
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.389,
+    "conf_floor": 0.6,
+    "cluster_score": 6.83,
+    "tier_new": "P3",
+    "tier_change": "DEMOTED",
+    "cluster_names": [
+      "Data Fragmentation Fatigue",
+      "Tool Navigation Friction"
+    ]
+  },
+  {
+    "name": "Evidence Change Alerting",
+    "project": "OFFX",
+    "base_score": 8.2,
+    "pain_score": 7.5,
+    "clusters": [
+      7,
+      5
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.389,
+    "conf_floor": 0.6,
+    "cluster_score": 6.83,
+    "tier_new": "P3",
+    "tier_change": "DEMOTED",
+    "cluster_names": [
+      "Process Verification Anxiety",
+      "Constant Urgency Pressure"
+    ]
+  },
+  {
+    "name": "Chemistry-Biology Translation AI",
+    "project": "CDDI",
+    "base_score": 7.8,
+    "pain_score": 7.0,
+    "clusters": [
+      7,
+      2
+    ],
+    "tier_original": "P1",
+    "best_multiplier": 1.444,
+    "conf_floor": 0.6,
+    "cluster_score": 6.76,
+    "tier_new": "P3",
+    "tier_change": "DEMOTED",
+    "cluster_names": [
+      "Process Verification Anxiety",
+      "Methodological Confidence in Triangulation"
+    ]
+  }
+]
