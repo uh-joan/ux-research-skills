@@ -154,6 +154,28 @@ hypotheses:
     shipped_date: "2026-04-27"
     experiment: experiments/H10-downstream-quality-audit/
 
+  - id: H11
+    slug: traceability-audit
+    priority: 2
+    status: shipped
+    statement: >
+      Quote density (verbatim quotes per section) is a measurable proxy for output
+      traceability, and at least 2 projects will show systematically low-density files.
+    prediction: >
+      Bimodal density distribution — some projects (Fusion, KAI) will cluster near 0 while
+      others (DI&A, CPI) cluster near 2-3. 15-20% of files below threshold.
+    result: >
+      PARTIALLY CONFIRMATORY. 148 files audited, 3 low-traceability files (2% — much lower
+      than predicted 15-20%). No bimodal distribution — broadly uniform 1.5-3.0.
+      Key finding: quote starvation cascade — PT JTBD density 3.66 but AI opps 0.03 and
+      scenarios 0.19, because ai-opportunity-analyzer and scenario-mapper synthesise from
+      JTBD statements without pulling quotes forward. Structural skill design gap confirmed.
+      Fixed: quality gate added to both skills requiring ≥1 verbatim quote per output.
+      KAI audit bug: 'overview' exclusion pattern filtered KAI's only persona file.
+      8 of 9 projects pipeline-complete (corrected). Fusion AI opps only genuine gap.
+    shipped_date: "2026-04-27"
+    experiment: experiments/H11-traceability-audit/
+
 current_hypothesis: ~
 current_experiment: ~
 
@@ -175,3 +197,4 @@ trajectory:
   - {id: H3, outcome: "Prompt quality analysis: FEELS CV=69%, desc depth CV=51% — 3 improvements applied to empathy-map-generator, extraction bug fixed in empathy-clustering"}
   - {id: H6, outcome: "Figma creator audit: all 5 failure modes already documented — 3 documentation gaps closed (Task prompt, screenshot table, Template Mode warning)"}
   - {id: H10, outcome: "Downstream quality: file count wrong metric, source proximity right metric. AI opps 89% complete, scenarios 100% presence. Fusion JTBD needs quote pass. Pipeline was mismeasured."}
+  - {id: H11, outcome: "Traceability audit: 148 files, 2% low-density. Quote starvation cascade — PT JTBD 3.66 → AI opps 0.03. Structural gap in ai-opportunity-analyzer + scenario-mapper fixed with quality gate."}

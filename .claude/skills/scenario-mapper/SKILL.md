@@ -332,6 +332,8 @@ For each high-confidence JTBD job:
 - Are acceptance criteria testable? (no vague language)
 - Does resolution align with JTBD outcome? (verify success state)
 
+**Quality gate before saving:** Each scenario must contain at least one verbatim user quote in the "User Quotes" field — pull directly from JTBD files or transcripts. If the JTBD file lacks quotes, read the upstream transcript. A scenario with no user quotes is incomplete regardless of narrative quality. Quotes must appear as blockquotes (`> "..."`) or inline `"..."` in the JTBD Connection section.
+
 ### Phase 3: Cross-Scenario Analysis (20-30 min)
 1. Group scenarios by design theme (common pain points)
 2. Identify patterns across personas (universal vs. niche needs)

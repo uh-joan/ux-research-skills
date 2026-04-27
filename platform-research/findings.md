@@ -2,7 +2,7 @@
 
 **Research Question:** How can the researcher_ux UX research skills platform be improved in algorithms, workflow automation, quality, and capability gaps?
 
-**Status:** 10 hypotheses shipped (H1-H10). Active — new hypotheses forming from outer loop.
+**Status:** 11 hypotheses shipped (H1-H11). Active — new hypotheses forming from outer loop.
 
 **Last Updated:** 2026-04-27
 
@@ -84,6 +84,20 @@ The 11 universal clusters:
 
 **Strategic implication:** The AI roadmap should be organized by H1 cluster, not by product. Products that share the same universal pain cluster should co-invest in a shared capability rather than each building their own.
 
+### Pattern 7: Quote Starvation Cascades Through Synthesis Skills [NEW — H11 RESULT]
+
+H11 audited 148 files across 9 projects for verbatim quote density (quotes/section). Only 3 files fell below threshold (2%), but those 3 revealed a structural skill design gap.
+
+**PT paradox:** PT has the highest JTBD quote density (3.66 avg) but the two lowest-density downstream files — AI opportunities (0.03) and scenarios (0.19). The analyst extracted well; the synthesis skills did not pull quotes forward.
+
+**Root cause:** `ai-opportunity-analyzer` and `scenario-mapper` synthesise from JTBD job statements but do not require embedding verbatim quotes from upstream JTBD files. Unless the researcher manually copies quotes, downstream files are structurally quote-sparse.
+
+**Fix shipped:** Quality gate added to both skills — each opportunity and each scenario must contain ≥1 verbatim blockquote pulled from JTBD files or transcripts. The gate requirement reads upstream if the scenario file lacks quotes.
+
+**Practical rule:** Quote density alone does not reveal traceability problems when intermediate synthesis layers exist. The cascade is invisible until you compare density across pipeline stages for the same project.
+
+---
+
 ### Pattern 6: Source Proximity, Not File Count, Predicts Research Quality [NEW — H10 RESULT]
 
 H10 compared Fusion's cross-persona JTBD synthesis (no individual files) vs. DI&A's per-transcript JTBD files, and KAI's consolidated personas overview vs. individual persona files.
@@ -155,3 +169,4 @@ DI&A (most complete) and CPI (richest data) are the reference implementations. 7
 | H3 | Prompt optimization | ✅ Shipped | FEELS quality CV=69% — prompt-driven not data-driven; 3 improvements + bug fix shipped |
 | H6 | Figma hardening | ✅ Shipped | Code audit — all 5 failure modes covered; 3 documentation gaps closed in SKILL.md |
 | H10 | Downstream quality audit | ✅ Shipped | File count wrong metric; source proximity right metric. Pipeline was mismeasured — AI opps 89% complete, scenarios 100% presence |
+| H11 | Traceability audit | ✅ Shipped | 148 files, 2% low-density. Quote starvation cascade: PT JTBD→AI opps drops 3.66→0.03. Quality gate added to ai-opportunity-analyzer + scenario-mapper |

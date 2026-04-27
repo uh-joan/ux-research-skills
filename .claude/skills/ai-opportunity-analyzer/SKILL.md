@@ -428,9 +428,11 @@ For each opportunity candidate:
 
 ### Step 4: Document Assessment (20-30 min)
 - Write individual opportunity assessments following output specification
-- Include verbatim user quotes as evidence
+- **Include ≥1 verbatim user quote per opportunity** — pull directly from JTBD files or transcripts, not from scenario descriptions. If the scenario file lacks quotes, read the upstream JTBD file for evidence.
 - Document switching triggers from JTBD as implementation leverage points
 - Note trust considerations and explainability requirements
+
+**Quality gate before saving:** Each opportunity must contain at least one line starting with `>` (blockquote) or a direct verbatim quote in `"..."`. An assessment with no user quotes is incomplete regardless of scoring quality.
 
 ### Step 5: Synthesize Cross-Opportunity Insights (30-45 min)
 - Group opportunities by priority tier
