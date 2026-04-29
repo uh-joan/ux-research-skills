@@ -1,0 +1,153 @@
+{
+  "threshold": 0.45,
+  "min_entries": 2,
+  "rank_correlation": {
+    "rho": 0.2,
+    "p": 0.556
+  },
+  "results": [
+    {
+      "cluster": "AI Opportunity-Threat Ambivalence",
+      "h1_claim": 7,
+      "independent_count": 8,
+      "projects": [
+        "CDDI",
+        "DI&A",
+        "Fusion",
+        "KAI",
+        "MASS",
+        "MT360",
+        "OFFX",
+        "PT"
+      ]
+    },
+    {
+      "cluster": "Expert Achievement Satisfaction",
+      "h1_claim": 8,
+      "independent_count": 8,
+      "projects": [
+        "CDDI",
+        "CPI",
+        "DI&A",
+        "Fusion",
+        "KAI",
+        "MASS",
+        "MT360",
+        "PT"
+      ]
+    },
+    {
+      "cluster": "Methodological Confidence in Triangulation",
+      "h1_claim": 8,
+      "independent_count": 8,
+      "projects": [
+        "CDDI",
+        "CPI",
+        "DI&A",
+        "Fusion",
+        "KAI",
+        "MT360",
+        "OFFX",
+        "PT"
+      ]
+    },
+    {
+      "cluster": "Vendor Commercial Friction",
+      "h1_claim": 7,
+      "independent_count": 6,
+      "projects": [
+        "CDDI",
+        "DI&A",
+        "Fusion",
+        "MASS",
+        "MT360",
+        "PT"
+      ]
+    },
+    {
+      "cluster": "Strategic Isolation & Disruption Anxiety",
+      "h1_claim": 7,
+      "independent_count": 2,
+      "projects": [
+        "DI&A",
+        "OFFX"
+      ]
+    },
+    {
+      "cluster": "Constant Urgency Pressure",
+      "h1_claim": 7,
+      "independent_count": 5,
+      "projects": [
+        "CDDI",
+        "CPI",
+        "Fusion",
+        "MASS",
+        "OFFX"
+      ]
+    },
+    {
+      "cluster": "Tool Navigation Friction",
+      "h1_claim": 7,
+      "independent_count": 4,
+      "projects": [
+        "CDDI",
+        "DI&A",
+        "Fusion",
+        "OFFX"
+      ]
+    },
+    {
+      "cluster": "Process Verification Anxiety",
+      "h1_claim": 6,
+      "independent_count": 8,
+      "projects": [
+        "CDDI",
+        "DI&A",
+        "Fusion",
+        "KAI",
+        "MASS",
+        "MT360",
+        "OFFX",
+        "PT"
+      ]
+    },
+    {
+      "cluster": "Data Fragmentation Fatigue",
+      "h1_claim": 7,
+      "independent_count": 5,
+      "projects": [
+        "CDDI",
+        "CPI",
+        "DI&A",
+        "Fusion",
+        "MT360"
+      ]
+    },
+    {
+      "cluster": "Manual Correction Burden at Scale",
+      "h1_claim": 8,
+      "independent_count": 6,
+      "projects": [
+        "CDDI",
+        "CPI",
+        "DI&A",
+        "Fusion",
+        "MASS",
+        "MT360"
+      ]
+    },
+    {
+      "cluster": "Vendor Partnership Dependency",
+      "h1_claim": 5,
+      "independent_count": 6,
+      "projects": [
+        "CPI",
+        "DI&A",
+        "Fusion",
+        "MASS",
+        "MT360",
+        "PT"
+      ]
+    }
+  ]
+}

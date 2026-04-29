@@ -1,0 +1,131 @@
+{
+  "h1_independent_counts": {
+    "0": [
+      "MASS",
+      "Fusion",
+      "DI&A"
+    ],
+    "1": [
+      "OFFX",
+      "DI&A",
+      "MASS",
+      "KAI",
+      "CDDI",
+      "Fusion",
+      "MT360"
+    ],
+    "2": [
+      "Fusion",
+      "CPI",
+      "MT360"
+    ],
+    "3": [
+      "Fusion"
+    ],
+    "4": [
+      "PT",
+      "DI&A",
+      "MASS",
+      "CPI",
+      "Fusion"
+    ],
+    "5": [
+      "OFFX",
+      "PT",
+      "DI&A",
+      "CDDI",
+      "CPI",
+      "Fusion"
+    ],
+    "6": [
+      "Fusion",
+      "DI&A"
+    ],
+    "7": [
+      "DI&A"
+    ],
+    "8": [
+      "MT360",
+      "DI&A"
+    ],
+    "9": [
+      "MASS"
+    ],
+    "10": [
+      "MASS"
+    ]
+  },
+  "rank_correlation": {
+    "rho": 0.428,
+    "p": 0.189
+  },
+  "verdicts": [
+    {
+      "cluster": "Expert Achievement Satisfaction",
+      "h1": 8,
+      "replicated": 7,
+      "delta": -1
+    },
+    {
+      "cluster": "Methodological Confidence in Triangulation",
+      "h1": 8,
+      "replicated": 3,
+      "delta": -5
+    },
+    {
+      "cluster": "Manual Correction Burden at Scale",
+      "h1": 8,
+      "replicated": 1,
+      "delta": -7
+    },
+    {
+      "cluster": "AI Opportunity-Threat Ambivalence",
+      "h1": 7,
+      "replicated": 3,
+      "delta": -4
+    },
+    {
+      "cluster": "Vendor Commercial Friction",
+      "h1": 7,
+      "replicated": 1,
+      "delta": -6
+    },
+    {
+      "cluster": "Strategic Isolation & Disruption Anxiety",
+      "h1": 7,
+      "replicated": 5,
+      "delta": -2
+    },
+    {
+      "cluster": "Constant Urgency Pressure",
+      "h1": 7,
+      "replicated": 6,
+      "delta": -1
+    },
+    {
+      "cluster": "Tool Navigation Friction",
+      "h1": 7,
+      "replicated": 2,
+      "delta": -5
+    },
+    {
+      "cluster": "Data Fragmentation Fatigue",
+      "h1": 7,
+      "replicated": 2,
+      "delta": -5
+    },
+    {
+      "cluster": "Process Verification Anxiety",
+      "h1": 6,
+      "replicated": 1,
+      "delta": -5
+    },
+    {
+      "cluster": "Vendor Partnership Dependency",
+      "h1": 5,
+      "replicated": 1,
+      "delta": -4
+    }
+  ],
+  "novel_clusters": 3
+}
