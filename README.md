@@ -8,16 +8,11 @@ This repository contains automated skills for qualitative UX research following 
 
 ## Setup
 
-1. **Configure environment variables:**
-   ```bash
-   cp .env.example .env
-   cp .mcp.json.example .mcp.json
-   # Edit .env and add your FIGMA_ACCESS_TOKEN
-   ```
+1. **Install Claude Code skills** (already in `.claude/skills/`)
 
-2. **Install Claude Code skills** (already in `.claude/skills/`)
+2. **Conduct user interviews** using [Interview Guide](docs/interview-guide.md)
 
-3. **Conduct user interviews** using [Interview Guide](docs/interview-guide.md)
+3. *(Optional)* **Figma visuals:** configure `.mcp.json` with your `FIGMA_ACCESS_TOKEN` to enable `journey-figma-creator`
 
 ## Quick Start
 
