@@ -1,6 +1,12 @@
 ---
 name: jtbd-analyzer
 description: Extract structured Jobs-to-be-Done (JTBD) statements from interview transcripts following Clayton Christensen methodology. Use when user wants to understand user motivation and progress goals, identify why users "hire" products, cluster jobs across personas, or create functional/emotional/social job statements. Transforms interview data into JTBD format (When [situation], I want to [motivation], So I can [outcome]) with job clusters and cross-user patterns.
+license: MIT
+metadata:
+  author: Joan Saez-Pons
+  version: 1.0.0
+  category: UX Research
+  methodology: Jobs-to-be-Done (Christensen)
 ---
 
 # Jobs-to-be-Done Analyzer

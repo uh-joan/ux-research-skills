@@ -1,6 +1,12 @@
 ---
 name: user-journey
 description: Create user journey maps from interview transcripts following Nielsen Norman Group methodology. Use when user wants to visualize workflow phases, map emotional trajectory, identify touchpoints and pain points, or understand user experience across time. Transforms interview narratives into structured journey maps with phases, actions, mindsets, emotions, opportunities, and cross-user patterns.
+license: MIT
+metadata:
+  author: Joan Saez-Pons
+  version: 1.0.0
+  category: UX Research
+  methodology: Nielsen Norman Group
 ---
 
 # User Journey Mapping Skill

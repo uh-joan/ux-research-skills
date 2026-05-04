@@ -1,0 +1,34 @@
+{
+  "name": "ux-research-skills",
+  "version": "1.0.0",
+  "description": "AI-powered UX research skills for Claude Code — transforms interview transcripts into personas, journey maps, JTBD analyses, and AI opportunity assessments following Nielsen Norman Group methodology.",
+  "license": "MIT",
+  "author": "Joan Saez-Pons <joan.saez-pons@clarivate.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uh-joan/ux-research-skills.git"
+  },
+  "homepage": "https://github.com/uh-joan/ux-research-skills#readme",
+  "keywords": [
+    "claude-code",
+    "agent-skills",
+    "ux-research",
+    "empathy-maps",
+    "user-journey",
+    "personas",
+    "jtbd",
+    "jobs-to-be-done",
+    "nielsen-norman-group",
+    "qualitative-research"
+  ],
+  "bin": {
+    "ux-research-skills": "./bin/install.js"
+  },
+  "files": [
+    "bin",
+    ".claude/skills"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}

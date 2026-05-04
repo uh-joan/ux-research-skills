@@ -1,6 +1,12 @@
 ---
 name: scenario-mapper
 description: Create scenario maps and Agile user stories from Jobs-to-be-Done analysis following Nielsen Norman Group methodology. Use when user wants to translate research into design scenarios, map user goals to product features, identify opportunity gaps, or generate user stories for development. Bridges JTBD insights to actionable design exploration and sprint planning with scenario narratives and acceptance criteria.
+license: MIT
+metadata:
+  author: Joan Saez-Pons
+  version: 1.0.0
+  category: UX Research
+  methodology: Nielsen Norman Group
 ---
 
 # Scenario Mapper

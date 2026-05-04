@@ -1,6 +1,13 @@
 ---
 name: journey-figma-creator
 description: Create visual user journey maps in Figma from structured markdown journey files. Use when user wants to visualize journey maps in Figma, create presentation-ready journey diagrams, generate design artifacts from research, or transform markdown journey maps into visual timeline layouts with phases, emotions, and touchpoints. Requires Figma Desktop Bridge plugin and existing journey markdown files.
+license: MIT
+compatibility: Requires Figma Desktop with the Figma Console MCP plugin and a configured FIGMA_ACCESS_TOKEN
+metadata:
+  author: Joan Saez-Pons
+  version: 1.0.0
+  category: UX Research
+  methodology: Nielsen Norman Group
 ---
 
 # Journey Map Generator

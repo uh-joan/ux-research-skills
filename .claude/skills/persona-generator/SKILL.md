@@ -1,6 +1,12 @@
 ---
 name: persona-generator
 description: Create qualitative user personas from interview transcripts and journey maps following Nielsen Norman Group methodology. Use when user wants to segment users by behaviors and attitudes, create composite persona profiles, identify shared goals and pain points across users, or synthesize multiple interviews into representative archetypes. Generates research-based personas with demographics, goals, behaviors, pain points, and verbatim quotes.
+license: MIT
+metadata:
+  author: Joan Saez-Pons
+  version: 1.0.0
+  category: UX Research
+  methodology: Nielsen Norman Group
 ---
 
 # Persona Generator

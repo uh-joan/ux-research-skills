@@ -1,6 +1,12 @@
 ---
 name: ai-opportunity-analyzer
 description: Analyze user workflows and JTBD to identify AI/ML product opportunities with feasibility and risk assessment. Use when user wants to find AI automation opportunities, evaluate AI augmentation potential, assess LLM use cases, or prioritize AI features by user needs, business value, and technical feasibility. Accounts for hallucination risk, trust boundaries, explainability needs, and vendor credibility requirements specific to AI products.
+license: MIT
+metadata:
+  author: Joan Saez-Pons
+  version: 1.0.0
+  category: UX Research
+  methodology: Nielsen Norman Group
 ---
 
 # AI Opportunity Analyzer

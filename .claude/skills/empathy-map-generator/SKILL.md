@@ -1,6 +1,12 @@
 ---
 name: empathy-map-generator
 description: Transform interview transcripts into structured 4-quadrant empathy maps (Says/Thinks/Does/Feels) following Nielsen Norman Group methodology. Use when user wants to synthesize interview insights, understand user attitudes and behaviors, identify pain points and goals, or create foundation for personas. Extracts verbatim quotes, infers thoughts, documents actions, and captures emotional states from raw interview data.
+license: MIT
+metadata:
+  author: Joan Saez-Pons
+  version: 1.0.0
+  category: UX Research
+  methodology: Nielsen Norman Group
 ---
 
 # Empathy Map Generator

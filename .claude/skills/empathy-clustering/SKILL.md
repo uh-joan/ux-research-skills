@@ -1,10 +1,13 @@
 ---
 name: empathy-clustering
 description: Automatically cluster FEELS quadrant entries from empathy maps using semantic embeddings (UMAP + HDBSCAN) to reveal universal pain patterns across users and product domains. Use when you want to find cross-user emotional patterns, generate a clustering-analysis.md for a project, identify universal vs. product-specific pains, or replace manual empathy clustering with automated analysis. Replaces the manual clustering-analysis.md workflow.
-version: 1.0.0
-author: researcher_ux platform research
-tags: [Empathy Maps, Semantic Clustering, UMAP, HDBSCAN, Cross-Project Analysis, Pain Patterns]
-dependencies: [sentence-transformers, hdbscan, umap-learn, scikit-learn, pandas, numpy]
+license: MIT
+compatibility: Requires Python with sentence-transformers, hdbscan, umap-learn, scikit-learn, pandas, numpy
+metadata:
+  author: Joan Saez-Pons
+  version: 1.0.0
+  category: UX Research
+  methodology: Nielsen Norman Group
 ---
 
 # Empathy Clustering Skill
