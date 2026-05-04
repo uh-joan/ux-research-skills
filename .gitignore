@@ -61,26 +61,41 @@ node_modules/
 dist/
 build/
 
-# Project folders - ignore all uppercase directories at root
-# Matches: MT360/, CDDI/, CPI/, etc.
-/[A-Z]*/
-/[A-Z][A-Z]*/
-/[A-Z][A-Z0-9]*/
-# Whitelist research workspace (case-insensitive FS on macOS causes false match above)
-!platform-research/
-# Whitelist automated clustering outputs in project dirs (raw project files remain excluded)
-!DI&A/empathy-maps/clustering-analysis-automated.md
-# Whitelist synthesized AI opportunity assessment for Fusion (closes pipeline gap)
-!Fusion/ai-opportunities/ai-opportunity-assessment-2026-04-27.md
+# UX research project folders (explicit list — avoids macOS case-insensitive false matches)
+/CDDI/
+/CPI/
+/DI&A/
+/Fusion/
+/indeed/
+/KAI/
+/MASS/
+/MT360/
+/OFFX/
+/PT/
+/scripts/
 
-# Docs folder (except specific public docs)
-/docs/
+# Docs folder — exclude new files, whitelist the three tracked docs
+/docs/**
 !/docs/ai-powered-ux-workflow.md
 !/docs/interview-guide.md
 !/docs/meta-skills-reference.md
+
+# Binary reports / sensitive deliverables
+*.pdf
+/platform-research/to_human/*slides*
 
 # Specific skills to ignore
 /.claude/skills/mental-model-diagram/
 /.claude/skills/stakeholder-mapper/
 /.claude/skills/task-analysis-generator/
+/.claude/skills/autoresearch/
+/.claude/skills/brainstorming-research-ideas/
+/.claude/skills/creative-thinking-for-research/
+/.claude/skills/crewai-multi-agent/
+/.claude/skills/cross-project-synthesizer/
+/.claude/skills/dspy/
+/.claude/skills/find-skills/
+/.claude/skills/ml-paper-writing/
+/.claude/skills/pain-point-matrix/
+/.claude/skills/research-pipeline/
 SECURITY_AUDIT_REPORT.md
