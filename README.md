@@ -1,95 +1,103 @@
 # UX Research Skills
 
-AI-powered Claude Code skills for transforming interview transcripts into actionable product insights.
+Transform interview transcripts into strategic product insights — in hours, not weeks.
 
-## Overview
+Built for UX researchers following Nielsen Norman Group methodology and Jobs-to-be-Done framework.
 
-This repository contains automated skills for qualitative UX research following Nielsen Norman Group methodology and Jobs-to-be-Done framework. Transform 9-16 interview transcripts into strategic deliverables in hours instead of weeks.
+---
+
+## What you get
+
+From a set of interview transcripts, this pipeline produces:
+
+- **Empathy maps** — what users say, think, do, and feel (per participant)
+- **User journey maps** — workflows, emotional trajectory, pain points
+- **Personas** — 3-5 behavioral clusters grounded in both attitudes and actions
+- **JTBD analysis** — why users hire your product, per persona and cross-product
+- **Design scenarios** — user stories and feature concepts mapped to real needs
+- **AI opportunity assessment** — prioritized AI/ML opportunities scored on user need, business value, and technical feasibility
+- *(Optional)* **Figma journey visuals** — stakeholder-ready diagrams
+
+---
+
+## What you need
+
+- **Interview transcripts** — TXT or VTT files, ideally 9–16 per project
+- **Claude Code** — with this repository cloned; skills are pre-installed in `.claude/skills/`
+
+That's it. No coding required.
+
+---
 
 ## Setup
 
-1. **Install Claude Code skills** (already in `.claude/skills/`)
+1. Clone this repository
+2. Open Claude Code in this folder
+3. *(Optional — for Figma visuals only)* Add your `FIGMA_ACCESS_TOKEN` to `.mcp.json`
 
-2. **Conduct user interviews** using [Interview Guide](docs/interview-guide.md)
+---
 
-3. *(Optional)* **Figma visuals:** configure `.mcp.json` with your `FIGMA_ACCESS_TOKEN` to enable `journey-figma-creator`
+## Starting a project
 
-## Quick Start
-
-1. **Create project folder** (e.g., `AWESOME_PROJECT/`)
-2. **Add interview transcripts** to `[PROJECT]/transcripts/`
-3. **Run Claude Code skills** in sequence:
-
-```bash
-# Step 1 & 2 (parallel): Extract insights
-empathy-map-generator    # → empathy-maps/
-user-journey            # → journey/
-
-# Step 3: Cluster users
-persona-generator       # → personas/
-
-# Step 4: Identify motivations
-jtbd-analyzer          # → jtbd/
-
-# Step 5 & 6 (parallel): Design solutions
-scenario-mapper        # → scenarios/
-ai-opportunity-analyzer # → ai-opportunities/
-
-# Step 7 (optional): Visualize
-journey-figma-creator  # → Figma visuals
-```
-
-## Workflow
+Create a folder for your project (e.g. `AWESOME_PROJECT/`) and add your transcript files:
 
 ```
-Interview Transcripts
-        ↓
-Step 1: Empathy Maps ────┐
-Step 2: User Journeys ───┤
-        ↓                │
-Step 3: Personas ←───────┘
-        ↓
-Step 4: JTBD Analysis
-        ↓
-        ├─→ Step 5: Design Scenarios
-        └─→ Step 6: AI Opportunities
-                ↓
-        Step 7: Figma Visuals (optional)
+AWESOME_PROJECT/
+└── transcripts/
+    ├── participant-alice.txt
+    ├── participant-bob.txt
+    └── ...
 ```
 
-## Skills Included
+Claude Code will create the output folders as you run each step.
 
-- **empathy-map-generator** - 4-quadrant synthesis (Says/Thinks/Does/Feels)
-- **user-journey** - Workflow visualization with emotional trajectory
-- **persona-generator** - Behavioral clustering into 3-5 personas
-- **jtbd-analyzer** - Jobs-to-be-Done extraction
-- **scenario-mapper** - Design scenarios and feature concepts
-- **ai-opportunity-analyzer** - AI/ML opportunity prioritization
-- **journey-figma-creator** - Visual journey maps for stakeholders (WIP)
+---
 
-## Output
+## The research pipeline
 
-- Evidence-based product roadmap
-- Prioritized feature backlog (P1/P2/P3/P4)
-- Visual artifacts for stakeholder alignment
-- Research-grounded design decisions
+Run each skill by typing `/skill-name` in Claude Code and pointing it to your transcripts or prior outputs.
 
-## Time Savings
+| Step | Skill | Input | Output |
+|------|-------|-------|--------|
+| 1 | `empathy-map-generator` | Transcript (per participant) | `empathy-maps/` |
+| 1b *(optional)* | `empathy-clustering` | 3+ empathy maps | Cross-user pain patterns |
+| 2 | `user-journey` | Transcript (per participant) | `journey/` |
+| 3 | `persona-generator` | Empathy maps + journey maps | `personas/` |
+| 4 | `jtbd-analyzer` | Transcripts + personas | `jtbd/` |
+| 5 | `scenario-mapper` | JTBD analyses | `scenarios/` |
+| 6 | `ai-opportunity-analyzer` | JTBD analyses + personas | `ai-opportunities/` |
+| 7 *(optional)* | `journey-figma-creator` | Journey map files | Figma visuals |
 
-Traditional manual research: **4-6 weeks**
-AI-powered automation: **Hours to 1-2 days**
-Time saved: **85-95%**
+**Steps 1 and 2 can run in parallel** — start both at once to save time.
+**Steps 5 and 6 can run in parallel** from the same JTBD outputs.
+**Step 1b** is worth running when you have 3+ empathy maps and want to see cross-user pain clusters before building personas.
+
+---
+
+## Time savings
+
+| Research activity | Traditional | With these skills |
+|-------------------|-------------|-------------------|
+| Empathy mapping | 2–3 days per interview | Minutes |
+| Journey mapping | 3–5 days | Minutes |
+| Persona creation | 1–2 weeks | Hours |
+| JTBD extraction | 1 week | Hours |
+| AI opportunity scoring | 1–2 weeks | Hours |
+| Figma stakeholder visuals | 3–5 days | Minutes |
+
+**Total: weeks of manual synthesis → hours of AI-assisted insights**
+
+---
 
 ## Methodology
 
-Based on:
-- Nielsen Norman Group qualitative research standards
-- Clayton Christensen Jobs-to-be-Done framework
-- Pain intensity-driven prioritization
+- [Nielsen Norman Group](https://www.nngroup.com/) qualitative research standards
+- [Clayton Christensen](https://hbr.org/2016/09/know-your-customers-jobs-to-be-done) Jobs-to-be-Done framework
+- Pain intensity-driven prioritization (emotional severity, not just frequency)
 
 ---
 
 ## Resources
 
-- [AI-Powered UX Workflow](docs/ai-powered-ux-workflow.md) - Detailed step-by-step workflow
-- [Interview Guide](docs/interview-guide.md) - Semi-structured interview script for user research
+- [Detailed workflow guide](docs/ai-powered-ux-workflow.md) — step-by-step instructions, quality checks, and examples
+- [Interview guide](docs/interview-guide.md) — semi-structured script for discovery interviews
