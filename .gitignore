@@ -62,6 +62,7 @@ dist/
 build/
 
 # UX research project folders (explicit list — avoids macOS case-insensitive false matches)
+/CCI/
 /CDDI/
 /CPI/
 /DI&A/

@@ -23,7 +23,8 @@ From a set of interview transcripts, this pipeline produces:
 ## What you need
 
 - **Interview transcripts** — TXT or VTT files, ideally 9–16 per project
-- **Claude Code** — with this repository cloned; skills are pre-installed in `.claude/skills/`
+- **GitHub Copilot** (VS Code) — prompt files are pre-installed in `.github/prompts/`
+- **Claude Code** — skills are pre-installed in `.claude/skills/`; or
 
 That's it. No coding required.
 
@@ -31,6 +32,13 @@ That's it. No coding required.
 
 ## Setup
 
+### GitHub Copilot (VS Code)
+1. Clone this repository
+2. Open in VS Code with the GitHub Copilot extension
+3. `copilot-instructions.md` loads automatically; prompt files are available via `/` in Copilot Chat
+4. Install Python deps for the clustering step: `pip install sentence-transformers hdbscan umap-learn scikit-learn pandas numpy`
+
+### Claude Code
 1. Clone this repository
 2. Open Claude Code in this folder
 3. *(Optional — for Figma visuals only)* Add your `FIGMA_ACCESS_TOKEN` to `.mcp.json`
@@ -55,18 +63,18 @@ Claude Code will create the output folders as you run each step.
 
 ## The research pipeline
 
-Run each skill by typing `/skill-name` in Claude Code and pointing it to your transcripts or prior outputs.
+In **Claude Code** type `/skill-name`; in **Copilot Chat** type `/Skill Name` (the prompt's `name:` field).
 
-| Step | Skill | Input | Output |
-|------|-------|-------|--------|
-| 1 | `empathy-map-generator` | Transcript (per participant) | `empathy-maps/` |
-| 1b *(optional)* | `empathy-clustering` | 3+ empathy maps | Cross-user pain patterns |
-| 2 | `user-journey` | Transcript (per participant) | `journey/` |
-| 3 | `persona-generator` | Empathy maps + journey maps | `personas/` |
-| 4 | `jtbd-analyzer` | Transcripts + personas | `jtbd/` |
-| 5 | `scenario-mapper` | JTBD analyses | `scenarios/` |
-| 6 | `ai-opportunity-analyzer` | JTBD analyses + personas | `ai-opportunities/` |
-| 7 *(optional)* | `journey-figma-creator` | Journey map files | Figma visuals |
+| Step | Skill | Claude Code | Copilot Chat | Input | Output |
+|------|-------|-------------|--------------|-------|--------|
+| 1 | Empathy map | `/empathy-map-generator` | `/Empathy Map Generator` | Transcript | `empathy-maps/` |
+| 1b *(optional)* | Clustering | `/empathy-clustering` | `/Empathy Clustering` | 3+ empathy maps | `empathy-maps/clustering-analysis.md` |
+| 2 | Journey map | `/user-journey` | `/User Journey Map` | Transcript | `journey/` |
+| 3 | Personas | `/persona-generator` | `/Persona Generator` | Empathy + journey maps | `personas/` |
+| 4 | JTBD | `/jtbd-analyzer` | `/JTBD Analyzer` | Empathy + journey maps | `jtbd/` |
+| 5 | Scenarios | `/scenario-mapper` | `/Scenario Mapper` | JTBD analyses | `scenarios/` |
+| 6 | AI opportunities | `/ai-opportunity-analyzer` | `/AI Opportunity Analyzer` | JTBD + personas | `ai-opportunities/` |
+| 7 *(optional)* | Figma visuals | `/journey-figma-creator` | — *(requires Figma MCP, Claude Code only)* | Journey map files | Figma |
 
 **Steps 1 and 2 can run in parallel** — start both at once to save time.
 **Steps 5 and 6 can run in parallel** from the same JTBD outputs.
@@ -94,6 +102,18 @@ Run each skill by typing `/skill-name` in Claude Code and pointing it to your tr
 - [Nielsen Norman Group](https://www.nngroup.com/) qualitative research standards
 - [Clayton Christensen](https://hbr.org/2016/09/know-your-customers-jobs-to-be-done) Jobs-to-be-Done framework
 - Pain intensity-driven prioritization (emotional severity, not just frequency)
+
+---
+
+## Repository layout
+
+```
+.claude/skills/        # Claude Code skills (agentic — auto file read/write)
+.github/
+  copilot-instructions.md   # Auto-loaded project context for Copilot
+  prompts/                  # Copilot prompt files (agent mode — /Name in VS Code)
+docs/                  # Workflow guide and interview guide
+```
 
 ---
 
