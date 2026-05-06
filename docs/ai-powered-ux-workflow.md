@@ -9,9 +9,9 @@ Use this workflow when starting a new project to systematically transform raw in
 ## Complete Workflow Summary
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│  INPUT: Interview Transcripts (9-16 per project)               │
-└─────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│              INPUT: Interview Transcripts               │
+└─────────────────────────────────────────────────────────┘
                            │
            ┌───────────────┴───────────────┐
            │                               │
