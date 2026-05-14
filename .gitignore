@@ -84,6 +84,7 @@ build/
 # Binary reports / sensitive deliverables
 *.pdf
 /platform-research/to_human/*slides*
+/platform-research/
 
 # Specific skills to ignore
 /.claude/skills/mental-model-diagram/
