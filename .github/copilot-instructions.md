@@ -16,6 +16,7 @@ Each product has its own folder with a standardised sub-structure:
   personas/           # personas-overview.md + optional individual persona files
   jtbd/               # jtbd-analysis-[name].md per participant + combined jtbd-analysis-[PROJECT].md
   scenarios/          # scenario-map-[date].md
+  storyboards/        # storyboard-[persona-slug]-[scenario-slug]-[YYYY-MM-DD].md
   ai-opportunities/   # ai-opportunity-assessment.md
 ```
 
@@ -70,6 +71,8 @@ jtbd-analyzer          →  [project]/jtbd/jtbd-analysis-[name].md
     ↓
 scenario-mapper        →  [project]/scenarios/scenario-map-[date].md
     ↓
+storyboard-generator   →  [project]/storyboards/storyboard-[persona]-[scenario]-[date].md
+    ↓
 ai-opportunity-analyzer →  [project]/ai-opportunities/ai-opportunity-assessment.md
 ```
 
@@ -84,6 +87,7 @@ Reusable prompts for all steps live in `.github/prompts/`. The same skills also 
 - **Personas:** NN/g qualitative personas — segmented by job function + goal + stakes
 - **JTBD:** Christensen framework — When [context] / I want to [motivation] / So I can [outcome]; functional + emotional + social dimensions
 - **Scenario mapping:** NN/g 5-element (Actor + Motivator + Intention + Action + Resolution) + Agile user stories
+- **Storyboards:** NN/g 3-component (Scenario + Visuals + Captions) — panel sequence with 1-to-1 path rule; low/medium/high fidelity; anchored to journey map phases
 - **Clustering:** sentence-transformers all-MiniLM-L6-v2 → UMAP(15d) → HDBSCAN — reference implementation in `platform-research/experiments/H1-semantic-clustering/code/run_clustering.py`
 
 ---
@@ -97,6 +101,7 @@ Reusable prompts for all steps live in `.github/prompts/`. The same skills also 
 - JTBD combined: `jtbd-analysis-[PROJECT].md`
 - Personas overview: `personas-overview.md`
 - Individual persona: `persona-[firstname-lastname].md`
+- Storyboards: `storyboard-[persona-slug]-[scenario-slug]-[YYYY-MM-DD].md`
 
 ---
 
