@@ -73,6 +73,7 @@ In **Claude Code** type `/skill-name`; in **Copilot Chat** type `/Skill Name` (t
 | 3 | Personas | `/persona-generator` | `/Persona Generator` | Empathy + journey maps | `personas/` |
 | 4 | JTBD | `/jtbd-analyzer` | `/JTBD Analyzer` | Empathy + journey maps | `jtbd/` |
 | 5 | Scenarios | `/scenario-mapper` | `/Scenario Mapper` | JTBD analyses | `scenarios/` |
+| 5b *(optional)* | Storyboards | `/storyboard-generator` | `/Storyboard Generator` | Persona + journey + JTBD | `storyboards/` |
 | 6 | AI opportunities | `/ai-opportunity-analyzer` | `/AI Opportunity Analyzer` | JTBD + personas | `ai-opportunities/` |
 | 7 *(optional)* | Figma visuals | `/journey-figma-creator` | — *(requires Figma MCP, Claude Code only)* | Journey map files | Figma |
 

@@ -63,7 +63,21 @@ Use this workflow when starting a new project to systematically transform raw in
            └───────────────────┘  └───────────────────────┘
                            │               │
                            └───────┬───────┘
-                                   ▼
+                                   │
+                       ┌───────────┴──────────────┐
+                       │    [OPTIONAL]             │
+                       ▼                           │
+           ┌───────────────────────────────────┐   │
+           │  STEP 5b: STORYBOARDS             │   │
+           │  (storyboard-generator)           │   │
+           │  • One path per storyboard        │   │
+           │  • 6–10 panels per scenario       │   │
+           │  • Emotional arc + captions       │   │
+           │  • Stakeholder alignment          │   │
+           └───────────────────────────────────┘   │
+                       │                           │
+                       └──────────┬────────────────┘
+                                  ▼
            ┌───────────────────────────────────────────────┐
            │  STEP 7 (Optional): FIGMA VISUALS             │
            │  (journey-figma-creator)                      │
@@ -84,6 +98,7 @@ Use this workflow when starting a new project to systematically transform raw in
 - **Parallel Processing:** Steps 1 & 2 run simultaneously (saves 2-3 days)
 - **Flexible JTBD:** Can use transcripts, journeys, or empathy maps as input
 - **Dual Outputs:** Steps 5 & 6 run in parallel from JTBD
+- **Optional Storyboards:** Step 5b sits after scenarios; uses persona + scenario + JTBD as input
 - **Complete Personas:** Require both empathy (attitudinal) + journeys (behavioral)
 
 ---
@@ -278,6 +293,35 @@ So I can [outcome]
 
 ---
 
+### Step 5b (Optional): Generate Storyboards (Narrative Visualization)
+**Skill:** `storyboard-generator`
+**Input:** Persona file + journey map + JTBD analysis + scenario map
+**Output:** `[PROJECT]/storyboards/storyboard-[persona-slug]-[scenario-slug]-YYYY-MM-DD.md`
+
+**Purpose:** Visualize a single user path as a sequence of panels, each with a scene, caption, and emotion. Bridges research insights to design conversations and stakeholder alignment.
+
+**NNG Framework:**
+- **1-to-1 rule:** One storyboard = one user path. No branching.
+- **3 components per panel:** Visual (scene description) + Caption (≤2 bullets) + Emotion
+- **Panel count:** 6–10 for a workflow scenario; 4–6 for a single task
+- **Fidelity:** Low (team/ideation), Medium (test/alignment), High (stakeholder/handoff)
+
+**Process:**
+```bash
+# Input: persona file + journey map + JTBD + scenario map
+# Run: storyboard-generator skill
+# Output: storyboard-[persona-slug]-[scenario-slug]-YYYY-MM-DD.md
+# One storyboard per scenario; secondary scenarios can be added later
+```
+
+**Quality Check:**
+- Each panel advances the story by one meaningful action
+- Emotional arc is interpreted, not just listed
+- Captions name the design gap or opportunity explicitly
+- Scenario grounded in a specific JTBD from Step 4
+
+---
+
 ### Step 6: Prioritize AI Opportunities (ROI)
 **Skill:** `ai-opportunity-analyzer`
 **Input:** JTBD analyses from Step 4
@@ -402,7 +446,21 @@ So I can [outcome]
            └───────────────────┘  └───────────────────────┘
                            │               │
                            └───────┬───────┘
-                                   ▼
+                                   │
+                       ┌───────────┴──────────────┐
+                       │    [OPTIONAL]             │
+                       ▼                           │
+           ┌───────────────────────────────────┐   │
+           │  STEP 5b: STORYBOARDS             │   │
+           │  (storyboard-generator)           │   │
+           │  • One path per storyboard        │   │
+           │  • 6–10 panels per scenario       │   │
+           │  • Emotional arc + captions       │   │
+           │  • Stakeholder alignment          │   │
+           └───────────────────────────────────┘   │
+                       │                           │
+                       └──────────┬────────────────┘
+                                  ▼
            ┌───────────────────────────────────────────────┐
            │  STEP 7 (Optional): FIGMA VISUALS             │
            │  (journey-figma-creator)                      │
@@ -424,6 +482,7 @@ So I can [outcome]
 - **Optional Clustering:** Step 1b runs after 3+ empathy maps; feeds emotional segmentation into Step 3
 - **Flexible JTBD:** Can use transcripts, journeys, or empathy maps as input
 - **Dual Outputs:** Steps 5 & 6 run in parallel from JTBD
+- **Optional Storyboards:** Step 5b sits after scenarios; one storyboard per persona per scenario
 - **Complete Personas:** Require both empathy (attitudinal) + journeys (behavioral)
 
 ---
@@ -436,6 +495,7 @@ So I can [outcome]
 | Persona creation from notes (1-2 weeks) | Empathy-driven clustering (hours) | **85%** |
 | JTBD extraction (1 week) | Automated job identification (hours) | **90%** |
 | Journey mapping (3-5 days) | AI-generated workflows + emotions (minutes) | **95%** |
+| Storyboard creation (1-2 days/scenario) | Research-grounded panel generation (minutes) | **90%** |
 | Opportunity scoring (1-2 weeks) | Pain intensity from empathy FEELS (hours) | **85%** |
 | Stakeholder presentation prep (3-5 days) | Auto-generated Figma visuals (minutes) | **95%** |
 
@@ -447,20 +507,20 @@ So I can [outcome]
 
 ```bash
 # 1. Organize transcripts
-mkdir -p project-name/transcripts/empathy-maps project-name/journey project-name/personas project-name/jtbd project-name/scenarios project-name/ai-opportunities
+mkdir -p project-name/transcripts project-name/empathy-maps project-name/journey project-name/personas project-name/jtbd project-name/scenarios project-name/storyboards project-name/ai-opportunities
 # Add interview TXT files to project-name/transcripts/
 
-# 2. Generate empathy maps (Step 1) - CAN RUN IN PARALLEL WITH STEP 3
+# 2. Generate empathy maps (Step 1) - CAN RUN IN PARALLEL WITH STEP 2
 cd project-name
 # Run empathy-map-generator for each transcript
 # Output: empathy-maps/[participant-name]-empathy-map-YYYY-MM-DD.md
 
-# 3. Map user journeys (Step 2) - CAN RUN IN PARALLEL WITH STEP 2
+# 3. Map user journeys (Step 2) - CAN RUN IN PARALLEL WITH STEP 1
 # Run user-journey for each transcript
 # Output: journey/[participant-name]-journey-YYYY-MM-DD.md
 
 # 3b. (Optional) Cluster pain patterns (Step 1b) — run after 3+ empathy maps
-# /empathy-clustering MT360
+# /empathy-clustering project-name
 # Output: empathy-maps/clustering-analysis.md
 
 # 4. Create personas (Step 3)
@@ -477,6 +537,11 @@ cd project-name
 # Run scenario-mapper on JTBD analyses
 # Output: scenarios/scenario-map-YYYY-MM-DD.md
 # Note: Can run in parallel with Step 6
+
+# 6b. (Optional) Generate storyboards (Step 5b)
+# Run storyboard-generator per persona + scenario
+# Output: storyboards/storyboard-[persona-slug]-[scenario-slug]-YYYY-MM-DD.md
+# One storyboard per scenario; start with highest-priority Must Have scenarios
 
 # 7. Prioritize AI opportunities (Step 6)
 # Run ai-opportunity-analyzer on JTBD analyses
