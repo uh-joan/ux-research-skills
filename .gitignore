@@ -64,12 +64,19 @@ build/
 # UX research project folders (explicit list — avoids macOS case-insensitive false matches)
 /CCI/
 /CDDI/
+/CMC/
 /CPI/
+/CTI/
+/Dialog/
 /DI&A/
+/Fingertip/
+/RegStrat/
 /Fusion/
 /indeed/
 /KAI/
 /MASS/
+/Metacore/
+/CDI/
 /MT360/
 /OFFX/
 /PT/
