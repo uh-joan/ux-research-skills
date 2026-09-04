@@ -16,6 +16,7 @@ From a set of interview transcripts, this pipeline produces:
 - **JTBD analysis** — why users hire your product, per persona and cross-product
 - **Design scenarios** — user stories and feature concepts mapped to real needs
 - **AI opportunity assessment** — prioritized AI/ML opportunities scored on user need, business value, and technical feasibility
+- *(Optional)* **Storyboards** — panel-by-panel visual narratives of a user scenario, for stakeholder alignment
 - *(Optional)* **Figma journey visuals** — stakeholder-ready diagrams
 
 ---
@@ -92,6 +93,7 @@ In **Claude Code** type `/skill-name`; in **Copilot Chat** type `/Skill Name` (t
 | Persona creation | 1–2 weeks | Hours |
 | JTBD extraction | 1 week | Hours |
 | AI opportunity scoring | 1–2 weeks | Hours |
+| Storyboard creation | 1–2 days per scenario | Minutes |
 | Figma stakeholder visuals | 3–5 days | Minutes |
 
 **Total: weeks of manual synthesis → hours of AI-assisted insights**
