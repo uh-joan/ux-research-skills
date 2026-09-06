@@ -8,91 +8,13 @@ Use this workflow when starting a new project to systematically transform raw in
 
 ## Complete Workflow Summary
 
-```
-┌─────────────────────────────────────────────────────────┐
-│              INPUT: Interview Transcripts               │
-└─────────────────────────────────────────────────────────┘
-                           │
-           ┌───────────────┴───────────────┐
-           │                               │
-           ▼                               ▼
-┌─────────────────────────┐    ┌─────────────────────────┐
-│  STEP 1: EMPATHY MAPS   │    │  STEP 2: USER JOURNEYS  │
-│  (empathy-map-generator)│    │  (user-journey)         │
-│  • SAYS/THINKS/DOES/    │    │  • Workflow phases      │
-│    FEELS quadrants      │    │  • Emotional trajectory │
-│  • Verbatim quotes      │    │  • Pain points          │
-│  • Pain intensity       │    │  • Opportunities        │
-└─────────────────────────┘    └─────────────────────────┘
-           │                               │
-           └───────────────┬───────────────┘
-                           ▼
-           ┌───────────────────────────────┐
-           │  STEP 3: PERSONAS             │
-           │  (persona-generator)          │
-           │  • Cluster behaviors across   │
-           │    empathy + journeys         │
-           │  • 3-5 composite personas     │
-           │  • Attitudinal + behavioral   │
-           └───────────────────────────────┘
-                           │
-           ┌───────────────┴───────────────┐
-           ▼                               ▼
-┌─────────────────────────┐    ┌─────────────────────────┐
-│  STEP 4: JTBD ANALYSIS  │    │  (Personas provide      │
-│  (jtbd-analyzer)        │◄───┤   trust context for     │
-│  • From transcripts OR  │    │   AI opportunities)     │
-│    journeys OR empathy  │    │                         │
-│  • Individual + cross-  │    │                         │
-│    persona extraction   │    │                         │
-└─────────────────────────┘    └─────────────────────────┘
-           │
-           └───────────────┬───────────────┐
-                           │               │
-                           ▼               ▼
-           ┌───────────────────┐  ┌───────────────────────┐
-           │  STEP 5: SCENARIOS│  │  STEP 6: AI           │
-           │  (scenario-mapper)│  │  OPPORTUNITIES        │
-           │  • From JTBD +    │  │  (ai-opportunity-     │
-           │    personas       │  │   analyzer)           │
-           │  • User stories   │  │  • From JTBD +        │
-           │  • Feature        │  │    personas           │
-           │    concepts       │  │  • 3D scoring matrix  │
-           │  • Acceptance     │  │  • Priority tiers     │
-           │    criteria       │  │    (P1/P2/P3/P4)      │
-           └───────────────────┘  └───────────────────────┘
-                           │               │
-                           └───────┬───────┘
-                                   │
-                       ┌───────────┴──────────────┐
-                       │    [OPTIONAL]             │
-                       ▼                           │
-           ┌───────────────────────────────────┐   │
-           │  STEP 5b: STORYBOARDS             │   │
-           │  (storyboard-generator)           │   │
-           │  • One path per storyboard        │   │
-           │  • 6–10 panels per scenario       │   │
-           │  • Emotional arc + captions       │   │
-           │  • Stakeholder alignment          │   │
-           └───────────────────────────────────┘   │
-                       │                           │
-                       └──────────┬────────────────┘
-                                  ▼
-           ┌───────────────────────────────────────────────┐
-           │  STEP 7 (Optional): FIGMA VISUALS             │
-           │  (journey-figma-creator)                      │
-           │  • Visual journey maps for stakeholders       │
-           │  • Requires Figma Desktop Bridge plugin       │
-           └───────────────────────────────────────────────┘
-                                   ▼
-┌─────────────────────────────────────────────────────────────────┐
-│  OUTPUT: Strategic Deliverables                                 │
-│  ✓ Evidence-based product roadmap                              │
-│  ✓ Prioritized feature backlog (Priority 1/2/3/4)              │
-│  ✓ Visual artifacts for stakeholder alignment                  │
-│  ✓ Research-grounded design decisions                          │
-└─────────────────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="pipeline-dark.svg">
+    <img src="pipeline-light.svg" alt="The research pipeline: interview transcripts become empathy maps and journey maps in parallel, both feed personas, personas feed jobs-to-be-done, which splits into design scenarios and scored AI opportunities, ending in an evidence-based roadmap." width="680">
+  </picture>
+</p>
+
 
 **Key Workflow Characteristics:**
 - **Parallel Processing:** Steps 1 & 2 run simultaneously (saves 2-3 days)

@@ -4,6 +4,13 @@ Transform interview transcripts into strategic product insights — in hours, no
 
 Built for UX researchers following Nielsen Norman Group methodology and Jobs-to-be-Done framework.
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/pipeline-dark.svg">
+    <img src="docs/pipeline-light.svg" alt="The research pipeline: interview transcripts become empathy maps and journey maps in parallel, both feed personas, personas feed jobs-to-be-done, which splits into design scenarios and scored AI opportunities, ending in an evidence-based roadmap." width="680">
+  </picture>
+</p>
+
 ---
 
 ## What you get

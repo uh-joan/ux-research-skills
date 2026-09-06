@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" viewBox="0 0 680 536" role="img" aria-label="The research pipeline: transcripts become empathy maps and journey maps in parallel, both feed personas, personas feed jobs-to-be-done, which splits into design scenarios and scored AI opportunities, ending in an evidence-based roadmap.">
+    <defs>
+      <marker id="mu-pipe" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#656d76"/></marker>
+    </defs>
+    <rect x="225" y="8" width="230" height="48" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+    <text x="340" y="28" text-anchor="middle" font-size="12.5" font-weight="600" fill="#24292f">Interview transcripts</text>
+    <text x="340" y="45" text-anchor="middle" font-size="10.5" fill="#656d76">10 to 20 per project</text>
+    <line x1="325" y1="56" x2="178" y2="90" stroke="#656d76" stroke-width="1.25" marker-end="url(#mu-pipe)"/>
+    <line x1="355" y1="56" x2="502" y2="90" stroke="#656d76" stroke-width="1.25" marker-end="url(#mu-pipe)"/>
+    <text x="340" y="80" text-anchor="middle" font-size="10" fill="#656d76">in parallel</text>
+    <rect x="55" y="94" width="230" height="52" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+    <text x="170" y="115" text-anchor="middle" font-size="12.5" font-weight="600" fill="#24292f">Empathy maps</text>
+    <text x="170" y="133" text-anchor="middle" font-size="10.5" fill="#656d76">says &#183; thinks &#183; does &#183; feels</text>
+    <rect x="395" y="94" width="230" height="52" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+    <text x="510" y="115" text-anchor="middle" font-size="12.5" font-weight="600" fill="#24292f">Journey maps</text>
+    <text x="510" y="133" text-anchor="middle" font-size="10.5" fill="#656d76">phases &#183; emotion &#183; pain points</text>
+    <line x1="180" y1="146" x2="322" y2="186" stroke="#656d76" stroke-width="1.25" marker-end="url(#mu-pipe)"/>
+    <line x1="500" y1="146" x2="358" y2="186" stroke="#656d76" stroke-width="1.25" marker-end="url(#mu-pipe)"/>
+    <text x="228" y="178" text-anchor="end" font-size="10" fill="#656d76">attitudes</text>
+    <text x="452" y="178" text-anchor="start" font-size="10" fill="#656d76">behavior</text>
+    <rect x="225" y="190" width="230" height="52" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+    <text x="340" y="211" text-anchor="middle" font-size="12.5" font-weight="600" fill="#24292f">Personas</text>
+    <text x="340" y="229" text-anchor="middle" font-size="10.5" fill="#656d76">3 to 5 grounded clusters</text>
+    <line x1="340" y1="242" x2="340" y2="282" stroke="#656d76" stroke-width="1.25" marker-end="url(#mu-pipe)"/>
+    <rect x="225" y="286" width="230" height="52" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+    <text x="340" y="307" text-anchor="middle" font-size="12.5" font-weight="600" fill="#24292f">Jobs-to-be-done</text>
+    <text x="340" y="325" text-anchor="middle" font-size="10.5" fill="#656d76">why users hire the product</text>
+    <line x1="325" y1="338" x2="178" y2="378" stroke="#656d76" stroke-width="1.25" marker-end="url(#mu-pipe)"/>
+    <line x1="355" y1="338" x2="502" y2="378" stroke="#656d76" stroke-width="1.25" marker-end="url(#mu-pipe)"/>
+    <rect x="55" y="382" width="230" height="52" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+    <text x="170" y="403" text-anchor="middle" font-size="12.5" font-weight="600" fill="#24292f">Design scenarios</text>
+    <text x="170" y="421" text-anchor="middle" font-size="10.5" fill="#656d76">user stories &#183; concepts</text>
+    <rect x="395" y="382" width="230" height="52" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+    <text x="510" y="403" text-anchor="middle" font-size="12.5" font-weight="600" fill="#24292f">AI opportunities</text>
+    <text x="510" y="421" text-anchor="middle" font-size="10.5" fill="#656d76">scored and tiered, P1 to P4</text>
+    <line x1="180" y1="434" x2="326" y2="474" stroke="#656d76" stroke-width="1.25" marker-end="url(#mu-pipe)"/>
+    <line x1="500" y1="434" x2="354" y2="474" stroke="#656d76" stroke-width="1.25" marker-end="url(#mu-pipe)"/>
+    <rect x="185" y="478" width="310" height="50" rx="8" fill="#f6e3e0" stroke="#b23327"/>
+    <text x="340" y="499" text-anchor="middle" font-size="12.5" font-weight="600" fill="#24292f">Evidence-based roadmap</text>
+    <text x="340" y="517" text-anchor="middle" font-size="10.5" fill="#656d76">hours instead of weeks</text>
+  </svg>
